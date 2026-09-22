@@ -477,8 +477,8 @@ export default function Home() {
             {
               name: "Rafael Maia",
               photo: "/brand/rafael-maia.jpg",
-              w: 1086,
-              h: 1448,
+              w: 858,
+              h: 1280,
               pos: "object-top",
               bio: "Empresário, palestrante e mentor, com foco em operação que gera resultado e mentalidade empresarial.",
             },
