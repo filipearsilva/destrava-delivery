@@ -370,32 +370,62 @@ export default function Home() {
       </section>
 
       {/* PALESTRANTES */}
-      <section className="border-b border-panel-border px-6 py-24 sm:py-32 text-center">
+      <section className="border-b border-panel-border px-6 py-24 sm:py-32">
         <Reveal>
-          <Eyebrow>Grandes nomes, grandes insights</Eyebrow>
-        </Reveal>
-        <Reveal delay={80}>
-          <h2 className="font-display mx-auto max-w-2xl text-3xl text-foreground sm:text-4xl">
-            Vini Pires e o time de convidados
-          </h2>
-        </Reveal>
-        <Reveal delay={140}>
-          <div className="mx-auto mt-10 max-w-5xl overflow-hidden rounded-3xl border border-panel-border">
-            <Image
-              src="/brand/palestrantes.jpg"
-              alt="Vini Pires e os palestrantes convidados do Destrava Delivery 2.0"
-              width={900}
-              height={664}
-              className="w-full h-auto"
-            />
-          </div>
-        </Reveal>
-        <Reveal delay={200}>
-          <p className="mx-auto mt-6 flex items-center justify-center gap-2 text-xs font-semibold uppercase tracking-wide text-foreground/40">
-            <LockSimple weight="fill" className="h-4 w-4 text-gold/70" />
-            Nomes e credenciais de cada convidado confirmados em breve
+          <p className="mb-4 text-xs font-semibold tracking-[0.3em] text-gold/70 uppercase">
+            [ Palestrantes ]
           </p>
         </Reveal>
+        <Reveal delay={80}>
+          <h2 className="font-display max-w-3xl text-3xl leading-tight text-foreground sm:text-4xl">
+            Quem opera em alta performance{" "}
+            <span className="text-gold">te preparará</span> para o{" "}
+            <span className="text-gold">Novo Delivery</span>.
+          </h2>
+        </Reveal>
+
+        <div className="mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <Reveal delay={140}>
+            <div className="overflow-hidden rounded-2xl border border-panel-border bg-panel">
+              <Image
+                src="/brand/vini-portrait.jpg"
+                alt="Vini Pires"
+                width={252}
+                height={332}
+                className="h-64 w-full object-cover"
+              />
+              <div className="p-6">
+                <span className="mb-3 block h-[3px] w-6 bg-gold" />
+                <p className="font-display text-lg text-foreground">
+                  Vini Pires
+                </p>
+                <p className="mt-1 text-sm text-foreground/60">
+                  Mentor de Delivery e iFood, já ajudou mais de 1.000
+                  empreendedores a crescer com mais estratégia e clareza.
+                </p>
+              </div>
+            </div>
+          </Reveal>
+
+          {Array.from({ length: 5 }).map((_, i) => (
+            <Reveal key={i} delay={180 + i * 60}>
+              <div className="flex h-full flex-col overflow-hidden rounded-2xl border border-dashed border-panel-border bg-panel/60">
+                <div className="flex h-64 w-full items-center justify-center bg-panel">
+                  <LockSimple weight="fill" className="h-8 w-8 text-gold/40" />
+                </div>
+                <div className="p-6">
+                  <span className="mb-3 block h-[3px] w-6 bg-gold/40" />
+                  <p className="font-display text-lg text-foreground/40">
+                    Em breve
+                  </p>
+                  <p className="mt-1 text-sm text-foreground/30">
+                    Nome e credencial confirmados em breve.
+                  </p>
+                </div>
+              </div>
+            </Reveal>
+          ))}
+        </div>
       </section>
 
       {/* INGRESSOS */}
