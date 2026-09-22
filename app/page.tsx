@@ -147,7 +147,7 @@ export default function Home() {
   return (
     <div className="flex flex-col bg-background">
       {/* HERO */}
-      <section className="bg-noise relative overflow-hidden border-b border-panel-border px-6 py-16 sm:py-20">
+      <section className="bg-noise relative overflow-hidden border-b border-panel-border px-6 py-16 sm:py-24">
         <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
           {/* LEFT: content */}
           <div className="text-left">
@@ -248,7 +248,7 @@ export default function Home() {
       </div>
 
       {/* MENTOR */}
-      <section className="relative border-b border-panel-border px-6 pt-24 pb-20">
+      <section className="relative border-b border-panel-border px-6 pt-24 pb-24 sm:pt-32 sm:pb-32">
         <div className="mx-auto grid max-w-5xl items-center gap-10 md:grid-cols-[220px_1fr]">
           <Reveal>
             <div className="mx-auto flex h-44 w-44 items-center justify-center rounded-full border-2 border-gold/60 bg-panel font-display text-4xl text-gold">
@@ -275,7 +275,7 @@ export default function Home() {
       </section>
 
       {/* PILARES */}
-      <section className="border-b border-panel-border bg-panel/40 px-6 py-20">
+      <section className="border-b border-panel-border bg-panel/40 px-6 py-24 sm:py-32">
         <Reveal>
           <Eyebrow>O que você vai destravar</Eyebrow>
         </Reveal>
@@ -300,7 +300,7 @@ export default function Home() {
       </section>
 
       {/* DOR */}
-      <section className="border-b border-panel-border px-6 py-20">
+      <section className="border-b border-panel-border px-6 py-24 sm:py-32">
         <Reveal>
           <Eyebrow>A verdade</Eyebrow>
         </Reveal>
@@ -309,6 +309,26 @@ export default function Home() {
             Quem toca o delivery sozinho, sempre esbarra no mesmo roteiro
           </h2>
         </Reveal>
+
+        <Reveal delay={140}>
+          <div className="mt-12 flex flex-col gap-3">
+            <Ticker
+              items={DORES.map((d) => ({ label: d.text, icon: d.icon }))}
+              diagonal={false}
+              direction="left"
+              durationSeconds={48}
+              tone="red"
+            />
+            <Ticker
+              items={DORES.map((d) => ({ label: d.label }))}
+              diagonal={false}
+              direction="right"
+              durationSeconds={40}
+              tone="red"
+            />
+          </div>
+        </Reveal>
+
         <div className="mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {DORES.map((d, i) => (
             <Reveal key={d.label} delay={i * 70}>
@@ -325,7 +345,7 @@ export default function Home() {
       </section>
 
       {/* VIRADA */}
-      <section className="border-b border-panel-border bg-panel/40 px-6 py-20">
+      <section className="border-b border-panel-border bg-panel/40 px-6 py-24 sm:py-32">
         <Reveal>
           <Eyebrow>A virada</Eyebrow>
         </Reveal>
@@ -350,7 +370,7 @@ export default function Home() {
       </section>
 
       {/* RESULTADOS / DEPOIMENTOS */}
-      <section className="border-b border-panel-border px-6 py-20 text-center">
+      <section className="border-b border-panel-border px-6 py-24 sm:py-32 text-center">
         <Reveal>
           <Eyebrow>Resultados reais</Eyebrow>
         </Reveal>
@@ -374,7 +394,7 @@ export default function Home() {
       </section>
 
       {/* PALESTRANTES */}
-      <section className="border-b border-panel-border px-6 py-20 text-center">
+      <section className="border-b border-panel-border px-6 py-24 sm:py-32 text-center">
         <Reveal>
           <Eyebrow>Grandes nomes, grandes insights</Eyebrow>
         </Reveal>
@@ -404,7 +424,7 @@ export default function Home() {
 
       {/* INGRESSOS */}
       <section
-        className="border-b border-panel-border bg-panel/40 px-6 py-20"
+        className="border-b border-panel-border bg-panel/40 px-6 py-24 sm:py-32"
         id="ingressos"
       >
         <Reveal>
@@ -477,7 +497,7 @@ export default function Home() {
       </section>
 
       {/* LOCAL */}
-      <section className="border-b border-panel-border bg-panel/40 px-6 py-20">
+      <section className="border-b border-panel-border bg-panel/40 px-6 py-24 sm:py-32">
         <Reveal>
           <Eyebrow>Onde será</Eyebrow>
         </Reveal>
@@ -541,7 +561,7 @@ export default function Home() {
       </section>
 
       {/* FAQ */}
-      <section className="px-6 py-20">
+      <section className="px-6 py-24 sm:py-32">
         <Reveal>
           <Eyebrow>Dúvidas</Eyebrow>
         </Reveal>
@@ -556,7 +576,7 @@ export default function Home() {
       </section>
 
       {/* CTA FINAL */}
-      <section className="bg-noise border-t border-panel-border px-6 py-20 text-center">
+      <section className="bg-noise border-t border-panel-border px-6 py-24 sm:py-32 text-center">
         <Reveal>
           <h2 className="font-display mx-auto max-w-2xl text-3xl text-foreground sm:text-4xl">
             O conhecimento muda o jogo.
@@ -581,7 +601,7 @@ export default function Home() {
       </section>
 
       {/* FOOTER */}
-      <footer className="border-t border-panel-border px-6 py-10 text-center text-xs text-foreground/40">
+      <footer className="border-t border-panel-border px-6 py-16 text-center text-xs text-foreground/40">
         <Image
           src="/brand/logo.png"
           alt="Destrava Delivery"
