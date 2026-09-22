@@ -395,18 +395,21 @@ export default function Home() {
             <span className="text-gold">está dizendo</span>.
           </Heading>
         </Reveal>
-        <div className="mx-auto mt-10 grid max-w-5xl grid-cols-1 gap-4 sm:grid-cols-3">
-          {Array.from({ length: 3 }).map((_, i) => (
-            <Reveal key={i} delay={i * 80}>
-              <div className="flex h-full flex-col items-center justify-center gap-3 rounded-2xl border border-dashed border-panel-border bg-panel/60 p-8">
-                <Quotes weight="fill" className="h-7 w-7 text-gold/70" />
-                <p className="text-xs font-semibold uppercase tracking-wide text-foreground/40">
-                  Depoimento em breve
-                </p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
+        <Reveal delay={140}>
+          <div className="mx-auto mt-10 max-w-3xl overflow-hidden rounded-2xl border border-panel-border card-soft">
+            <video
+              src="/video/ultima-edicao.mp4"
+              controls
+              playsInline
+              preload="metadata"
+              className="h-auto w-full"
+            />
+          </div>
+          <p className="mx-auto mt-4 flex max-w-3xl items-center justify-center gap-2 text-xs font-semibold uppercase tracking-wide text-foreground/40">
+            <Quotes weight="fill" className="h-4 w-4 text-gold/70" />
+            Vídeo oficial da 1ª edição do Destrava Delivery
+          </p>
+        </Reveal>
       </section>
 
       {/* PALESTRANTES */}
