@@ -276,39 +276,6 @@ export default function Home() {
         </Reveal>
       </div>
 
-      {/* MENTOR */}
-      <section className="relative border-b border-panel-border px-6 pt-24 pb-24 sm:pt-32 sm:pb-32">
-        <div className="mx-auto grid max-w-5xl items-center gap-10 md:grid-cols-[220px_1fr]">
-          <Reveal>
-            <div className="mx-auto h-44 w-44 overflow-hidden rounded-full border-2 border-gold/60 bg-panel">
-              <Image
-                src="/brand/vini-portrait.jpg"
-                alt="Vini Pires"
-                width={490}
-                height={1103}
-                className="h-full w-full object-cover object-top"
-              />
-            </div>
-          </Reveal>
-          <Reveal delay={120}>
-            <div>
-              <Eyebrow>Quem está por trás</Eyebrow>
-              <h2 className="font-display text-3xl text-foreground">
-                Vini Pires
-              </h2>
-              <p className="mt-4 max-w-2xl text-foreground/70">
-                Mentor de Delivery e iFood, Vini Pires já ajudou mais de 1.000
-                empreendedores a enxergarem seus negócios com mais estratégia,
-                lucro e clareza. Foi dessa vivência no mercado e da vontade de
-                compartilhar conhecimento que nasceu o Destrava Delivery: um
-                evento para quem quer sair do improviso e alcançar um novo
-                nível.
-              </p>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
       {/* PILARES */}
       <section className="border-b border-panel-border bg-panel/40 px-6 py-24 sm:py-32">
         <Reveal>
@@ -580,6 +547,47 @@ export default function Home() {
               </div>
             </Reveal>
           ))}
+        </div>
+      </section>
+
+      {/* MENTOR */}
+      <section className="relative overflow-hidden border-b border-panel-border">
+        <div className="mx-auto grid max-w-6xl items-center gap-0 lg:grid-cols-2">
+          <Reveal className="order-2 px-6 py-24 sm:py-32 lg:order-1 lg:px-10">
+            <Eyebrow>Quem está por trás</Eyebrow>
+            <h2 className="font-display max-w-md text-4xl leading-tight text-foreground sm:text-5xl">
+              Vini <span className="text-gold">Pires</span>
+            </h2>
+            <p className="mt-6 max-w-md text-base text-foreground/70 sm:text-lg">
+              Mentor de Delivery e iFood, Vini Pires já ajudou mais de 1.000
+              empreendedores a enxergarem seus negócios com mais estratégia,
+              lucro e clareza. Foi dessa vivência no mercado e da vontade de
+              compartilhar conhecimento que nasceu o Destrava Delivery: um
+              evento para quem quer sair do improviso e alcançar um novo
+              nível.
+            </p>
+            <a
+              href="https://www.instagram.com/vinipiresoficial"
+              target="_blank"
+              rel="noreferrer"
+              className="btn-gold-outline mt-8 inline-flex w-fit items-center gap-2 rounded-full px-6 py-3 text-sm font-bold uppercase tracking-wide text-gold"
+            >
+              <InstagramLogo weight="fill" className="h-4 w-4" />
+              @vinipiresoficial
+            </a>
+          </Reveal>
+          <Reveal delay={140} className="order-1 lg:order-2">
+            <div className="aspect-[4/5] w-full lg:aspect-auto lg:h-full">
+              <Image
+                src="/brand/vini-hero.jpg"
+                alt="Vini Pires"
+                width={1080}
+                height={777}
+                className="h-full w-full object-cover"
+                priority
+              />
+            </div>
+          </Reveal>
         </div>
       </section>
 
