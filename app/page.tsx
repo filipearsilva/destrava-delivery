@@ -213,12 +213,6 @@ export default function Home() {
                 priority
               />
             </Reveal>
-            <Reveal delay={60}>
-              <p className="mb-2 flex items-center gap-3 text-xs font-semibold tracking-[0.3em] text-gold uppercase">
-                <span className="h-px w-6 bg-gold/60" />
-                São Paulo
-              </p>
-            </Reveal>
             <Reveal delay={120}>
               <h1 className="font-display max-w-xl text-4xl leading-[1.05] tracking-wide text-foreground sm:text-5xl lg:text-[2.375rem]">
                 Seu delivery pode faturar mais.{" "}
