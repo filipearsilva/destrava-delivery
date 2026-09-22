@@ -252,7 +252,7 @@ export default function Home() {
                 alt="Destrava Delivery"
                 width={2000}
                 height={499}
-                className="mb-5 h-[56px] w-auto lg:h-[62px]"
+                className="mb-4 h-[56px] w-auto lg:h-[64px]"
                 priority
               />
             </Reveal>
@@ -265,7 +265,7 @@ export default function Home() {
               </h1>
             </Reveal>
             <Reveal delay={180}>
-              <p className="mt-3 max-w-lg text-sm text-foreground/70 sm:text-base lg:text-[0.9rem]">
+              <p className="mt-2 max-w-lg text-sm text-foreground/70 sm:text-base lg:text-[0.9rem]">
                 2 dias para sair do improviso, enxergar o negócio por inteiro
                 e destravar as decisões que estão limitando seu crescimento.
                 Ao lado de Vini Pires, mentor de Delivery e iFood que já
@@ -274,8 +274,8 @@ export default function Home() {
             </Reveal>
 
             <Reveal delay={240}>
-              <div className="mt-5 flex w-fit flex-col gap-3 rounded-2xl border border-panel-border bg-panel px-6 py-3 sm:flex-row sm:gap-6">
-                <div className="flex items-center gap-3 text-left">
+              <div className="mt-4 flex w-fit flex-col gap-2 rounded-2xl border border-panel-border bg-panel px-6 py-2 sm:flex-row sm:gap-6">
+                <div className="flex items-center gap-2 text-left">
                   <CalendarBlank weight="fill" className="h-6 w-6 text-gold" />
                   <div>
                     <p className="text-xs uppercase tracking-widest text-foreground/50">
@@ -287,7 +287,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="hidden h-8 w-px bg-panel-border sm:block" />
-                <div className="flex items-center gap-3 text-left">
+                <div className="flex items-center gap-2 text-left">
                   <MapPin weight="fill" className="h-6 w-6 text-gold" />
                   <div>
                     <p className="text-xs uppercase tracking-widest text-foreground/50">
@@ -302,12 +302,12 @@ export default function Home() {
             </Reveal>
 
             <Reveal delay={320}>
-              <div className="mt-5">
+              <div className="mt-4">
                 <a
                   href={CHECKOUT_URL}
                   target="_blank"
                   rel="noreferrer"
-                  className="btn-gold inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-base font-bold uppercase tracking-wide text-black"
+                  className="btn-gold inline-flex items-center gap-2 rounded-full px-8 py-4 text-base font-bold uppercase tracking-wide text-black"
                 >
                   Quero destravar meu delivery
                   <ArrowRight weight="bold" className="h-5 w-5" />
