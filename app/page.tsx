@@ -440,7 +440,29 @@ export default function Home() {
             </div>
           </Reveal>
 
-          {Array.from({ length: 5 }).map((_, i) => (
+          <Reveal delay={200}>
+            <div className="overflow-hidden rounded-2xl border border-panel-border bg-panel">
+              <Image
+                src="/brand/gabriel-viana.jpg"
+                alt="Gabriel Viana"
+                width={1080}
+                height={1080}
+                className="h-64 w-full object-cover"
+              />
+              <div className="p-6">
+                <span className="mb-3 block h-[3px] w-6 bg-gold" />
+                <p className="font-display text-lg text-foreground">
+                  Gabriel Viana
+                </p>
+                <p className="mt-1 text-sm text-foreground/60">
+                  Conhecido como Mago do iFood, mentor de gestores e donos de
+                  restaurante em gestão de delivery.
+                </p>
+              </div>
+            </div>
+          </Reveal>
+
+          {Array.from({ length: 4 }).map((_, i) => (
             <Reveal key={i} delay={180 + i * 60}>
               <div className="flex h-full flex-col overflow-hidden rounded-2xl border border-dashed border-panel-border bg-panel/60">
                 <div className="flex h-64 w-full items-center justify-center bg-panel">
