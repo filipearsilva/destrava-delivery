@@ -321,6 +321,18 @@ export default function Home() {
               </div>
             </Reveal>
 
+            <Reveal delay={360} className="lg:hidden">
+              <div className="relative mt-8 aspect-[4/5] w-full overflow-hidden rounded-2xl border border-panel-border">
+                <Image
+                  src="/brand/hero-palco.jpg"
+                  alt="Vini Pires no palco do Destrava Delivery"
+                  fill
+                  sizes="100vw"
+                  className="object-cover object-[72%_20%]"
+                />
+              </div>
+            </Reveal>
+
           </div>
 
           {/* RIGHT: espaço vazio — a imagem é o fundo da seção */}
