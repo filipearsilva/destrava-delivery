@@ -241,8 +241,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* TICKER — faixa diagonal entre hero e mentor, por cima das duas seções */}
-      <div className="relative z-20 -mt-8 mb-[-2rem] sm:-mt-10">
+      {/* TICKER — faixa diagonal */}
+      <div className="relative z-20">
         <Reveal delay={420}>
           <Ticker items={CREDIBILIDADE} />
         </Reveal>

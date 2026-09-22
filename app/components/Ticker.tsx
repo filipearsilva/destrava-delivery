@@ -23,34 +23,38 @@ export default function Ticker({
   const dotAccent = tone === "red" ? "text-red-400/40" : "text-gold/40";
   const border = tone === "red" ? "border-red-400/20" : "border-gold/20";
 
-  return (
+  const track = (
     <div
-      className="-mx-6 overflow-hidden"
+      className={`ticker-track gap-10 border-y ${border} bg-panel/60 py-4`}
+      style={{
+        animationDuration: `${durationSeconds}s`,
+        animationDirection: direction === "right" ? "reverse" : "normal",
+      }}
     >
-      <div className={diagonal ? "-rotate-2" : ""}>
+      {loop.map(({ label, icon: ItemIcon }, i) => (
         <div
-          className={`ticker-track gap-10 border-y ${border} bg-panel/60 py-4`}
-          style={{
-            animationDuration: `${durationSeconds}s`,
-            animationDirection: direction === "right" ? "reverse" : "normal",
-          }}
+          key={`${label}-${i}`}
+          className="flex shrink-0 items-center gap-2 whitespace-nowrap"
         >
-          {loop.map(({ label, icon: ItemIcon }, i) => (
-            <div
-              key={`${label}-${i}`}
-              className="flex shrink-0 items-center gap-2 whitespace-nowrap"
-            >
-              {ItemIcon && (
-                <ItemIcon weight="fill" className={`h-5 w-5 ${accent}`} />
-              )}
-              <p className="text-sm font-semibold uppercase tracking-wide text-foreground/70">
-                {label}
-              </p>
-              <span className={`ml-8 ${dotAccent}`}>•</span>
-            </div>
-          ))}
+          {ItemIcon && (
+            <ItemIcon weight="fill" className={`h-5 w-5 ${accent}`} />
+          )}
+          <p className="text-sm font-semibold uppercase tracking-wide text-foreground/70">
+            {label}
+          </p>
+          <span className={`ml-8 ${dotAccent}`}>•</span>
         </div>
-      </div>
+      ))}
+    </div>
+  );
+
+  if (!diagonal) {
+    return <div className="-mx-6 overflow-hidden">{track}</div>;
+  }
+
+  return (
+    <div className="relative left-1/2 w-screen -translate-x-1/2 overflow-hidden py-6">
+      <div className="-rotate-2">{track}</div>
     </div>
   );
 }
