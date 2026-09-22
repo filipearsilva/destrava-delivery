@@ -207,8 +207,8 @@ export default function Home() {
             className="h-full w-full object-contain object-right"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/55 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background/50 via-transparent to-transparent" />
         </div>
 
         <div className="relative mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
