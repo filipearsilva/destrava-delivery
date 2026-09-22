@@ -536,10 +536,14 @@ export default function Home() {
           ))}
 
           <Reveal delay={440}>
-            <div className="flex h-full flex-col overflow-hidden rounded-2xl border border-panel-border bg-panel">
-              <div className="flex h-64 w-full items-center justify-center bg-panel font-display text-4xl text-gold">
-                GH
-              </div>
+            <div className="overflow-hidden rounded-2xl border border-panel-border bg-panel">
+              <Image
+                src="/brand/glaucia-hortega.jpg"
+                alt="Glaucia Hortega"
+                width={640}
+                height={641}
+                className="h-64 w-full object-cover object-top"
+              />
               <div className="p-6">
                 <span className="mb-3 block h-[3px] w-6 bg-gold" />
                 <p className="font-display text-lg text-foreground">
