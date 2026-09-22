@@ -28,6 +28,7 @@ import {
   Quotes,
 } from "@phosphor-icons/react/dist/ssr";
 import Countdown from "./components/Countdown";
+import AutoplayVideo from "./components/AutoplayVideo";
 import Faq from "./components/Faq";
 import Reveal from "./components/Reveal";
 import Ticker from "./components/Ticker";
@@ -383,11 +384,8 @@ export default function Home() {
             <div className="card-soft rounded-[2.5rem] border-4 border-panel-border bg-black p-2">
               <div className="relative aspect-[9/19.5] w-full overflow-hidden rounded-[1.8rem] bg-black">
                 <div className="absolute top-0 left-1/2 z-10 h-4 w-20 -translate-x-1/2 rounded-b-2xl bg-black" />
-                <video
+                <AutoplayVideo
                   src="/video/ultima-edicao.mp4"
-                  controls
-                  playsInline
-                  preload="metadata"
                   className="h-full w-full object-cover"
                 />
               </div>
