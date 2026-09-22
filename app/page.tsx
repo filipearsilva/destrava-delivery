@@ -175,6 +175,13 @@ function Heading({
 export default function Home() {
   return (
     <div className="flex flex-col bg-background">
+      {/* FAIXA DE LOTE */}
+      <div className="bg-panel px-6 py-2.5 text-center">
+        <p className="text-xs font-semibold uppercase tracking-wide text-foreground/80 sm:text-sm">
+          Lote atual encerra em <Countdown target={LOTE_DEADLINE} />
+        </p>
+      </div>
+
       {/* HERO */}
       <section className="bg-noise relative overflow-hidden px-6 py-16 sm:py-24">
         <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
