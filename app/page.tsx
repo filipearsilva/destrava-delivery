@@ -379,7 +379,7 @@ export default function Home() {
             </Reveal>
           </div>
 
-          <Reveal delay={180} className="mx-auto w-full max-w-[240px]">
+          <Reveal delay={180} className="mx-auto w-full max-w-[288px]">
             <div className="card-soft rounded-[2.5rem] border-4 border-panel-border bg-black p-2">
               <div className="relative aspect-[9/19.5] w-full overflow-hidden rounded-[1.8rem] bg-black">
                 <div className="absolute top-0 left-1/2 z-10 h-4 w-20 -translate-x-1/2 rounded-b-2xl bg-black" />
