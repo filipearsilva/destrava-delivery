@@ -134,9 +134,19 @@ const TICKETS = [
   },
 ];
 
-function Eyebrow({ children }: { children: React.ReactNode }) {
+function Eyebrow({
+  children,
+  align = "center",
+}: {
+  children: React.ReactNode;
+  align?: "center" | "left";
+}) {
   return (
-    <p className="mb-4 flex items-center gap-2 text-xs font-semibold tracking-[0.3em] text-gold/70 uppercase">
+    <p
+      className={`mb-4 flex w-fit items-center gap-2 text-xs font-semibold tracking-[0.3em] text-gold/70 uppercase ${
+        align === "center" ? "mx-auto" : ""
+      }`}
+    >
       <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
       {children}
     </p>
@@ -146,13 +156,17 @@ function Eyebrow({ children }: { children: React.ReactNode }) {
 function Heading({
   children,
   className = "",
+  align = "center",
 }: {
   children: React.ReactNode;
   className?: string;
+  align?: "center" | "left";
 }) {
   return (
     <h2
-      className={`font-display max-w-2xl text-3xl leading-tight text-foreground/90 sm:text-4xl ${className}`}
+      className={`font-display mx-auto max-w-2xl text-3xl leading-tight text-foreground/90 sm:text-4xl ${
+        align === "center" ? "text-center" : ""
+      } ${className}`}
     >
       {children}
     </h2>
@@ -396,7 +410,7 @@ export default function Home() {
           <Eyebrow>Palestrantes</Eyebrow>
         </Reveal>
         <Reveal delay={80}>
-          <Heading className="max-w-3xl">
+          <Heading>
             Quem opera em alta performance{" "}
             <span className="text-gold">te preparará</span> para o{" "}
             <span className="text-gold">Novo Delivery</span>.
