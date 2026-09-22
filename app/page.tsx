@@ -274,12 +274,18 @@ export default function Home() {
 
           </div>
 
-          {/* RIGHT: placeholder para imagem/manipulação que o Filipe vai subir */}
+          {/* RIGHT: imagem do palco */}
           <Reveal delay={160} className="hidden lg:block">
-            <div className="relative flex aspect-[4/5] max-h-[520px] w-full items-center justify-center rounded-3xl border border-dashed border-panel-border bg-panel/40">
-              <p className="px-8 text-center text-xs font-semibold uppercase tracking-widest text-foreground/30">
-                Espaço reservado: imagem/manipulação a ser inserida
-              </p>
+            <div className="relative aspect-[4/5] max-h-[520px] w-full overflow-hidden rounded-3xl border border-panel-border">
+              <Image
+                src="/brand/hero-palco.jpg"
+                alt="Vini Pires no palco do Destrava Delivery"
+                width={1672}
+                height={941}
+                className="h-full w-full object-cover object-[65%_center]"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent" />
 
               {/* Card estilo notificação de pedido */}
               <div className="absolute -bottom-5 -left-5 w-60 rounded-2xl border border-panel-border bg-panel p-4 shadow-2xl">
