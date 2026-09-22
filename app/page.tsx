@@ -360,30 +360,40 @@ export default function Home() {
 
       {/* RESULTADOS / DEPOIMENTOS */}
       <section className="border-b border-panel-border px-6 py-24 sm:py-32">
-        <Reveal>
-          <Eyebrow>Resultados reais</Eyebrow>
-        </Reveal>
-        <Reveal delay={80}>
-          <Heading>
-            O que quem já passou pelo Destrava{" "}
-            <span className="text-gold">está dizendo</span>.
-          </Heading>
-        </Reveal>
-        <Reveal delay={140}>
-          <div className="mx-auto mt-10 max-w-3xl overflow-hidden rounded-2xl border border-panel-border card-soft">
-            <video
-              src="/video/ultima-edicao.mp4"
-              controls
-              playsInline
-              preload="metadata"
-              className="h-auto w-full"
-            />
+        <div className="mx-auto grid max-w-5xl items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
+          <div>
+            <Reveal>
+              <Eyebrow align="left">Resultados reais</Eyebrow>
+            </Reveal>
+            <Reveal delay={80}>
+              <Heading align="left">
+                O que quem já passou pelo Destrava{" "}
+                <span className="text-gold">está dizendo</span>.
+              </Heading>
+            </Reveal>
+            <Reveal delay={140}>
+              <p className="mt-6 flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-foreground/40">
+                <Quotes weight="fill" className="h-4 w-4 text-gold/70" />
+                Vídeo oficial da 1ª edição do Destrava Delivery
+              </p>
+            </Reveal>
           </div>
-          <p className="mx-auto mt-4 flex max-w-3xl items-center justify-center gap-2 text-xs font-semibold uppercase tracking-wide text-foreground/40">
-            <Quotes weight="fill" className="h-4 w-4 text-gold/70" />
-            Vídeo oficial da 1ª edição do Destrava Delivery
-          </p>
-        </Reveal>
+
+          <Reveal delay={180} className="mx-auto w-full max-w-[240px]">
+            <div className="card-soft rounded-[2.5rem] border-4 border-panel-border bg-black p-2">
+              <div className="relative aspect-[9/19.5] w-full overflow-hidden rounded-[1.8rem] bg-black">
+                <div className="absolute top-0 left-1/2 z-10 h-4 w-20 -translate-x-1/2 rounded-b-2xl bg-black" />
+                <video
+                  src="/video/ultima-edicao.mp4"
+                  controls
+                  playsInline
+                  preload="metadata"
+                  className="h-full w-full object-cover"
+                />
+              </div>
+            </div>
+          </Reveal>
+        </div>
       </section>
 
       {/* PALESTRANTES */}
