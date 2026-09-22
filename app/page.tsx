@@ -197,7 +197,21 @@ export default function Home() {
 
       {/* HERO — ATENÇÃO */}
       <section className="bg-noise relative overflow-hidden px-6 py-10 sm:py-14 lg:flex lg:min-h-[calc(100svh-40px)] lg:items-center lg:py-6">
-        <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
+        {/* Imagem de fundo, sem corte */}
+        <div className="absolute inset-0 hidden lg:block">
+          <Image
+            src="/brand/hero-palco.jpg"
+            alt="Vini Pires no palco do Destrava Delivery"
+            width={1672}
+            height={941}
+            className="h-full w-full object-contain object-right"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/40" />
+        </div>
+
+        <div className="relative mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
           {/* LEFT: content */}
           <div className="text-left">
             <Reveal>
@@ -271,20 +285,8 @@ export default function Home() {
 
           </div>
 
-          {/* RIGHT: imagem do palco */}
-          <Reveal delay={160} className="hidden lg:block">
-            <div className="relative aspect-[4/5] max-h-[520px] w-full overflow-hidden rounded-3xl border border-panel-border">
-              <Image
-                src="/brand/hero-palco.jpg"
-                alt="Vini Pires no palco do Destrava Delivery"
-                width={1672}
-                height={941}
-                className="h-full w-full object-cover object-[65%_center]"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent" />
-            </div>
-          </Reveal>
+          {/* RIGHT: espaço vazio — a imagem é o fundo da seção */}
+          <div className="hidden lg:block" />
         </div>
       </section>
 
