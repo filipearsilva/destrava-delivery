@@ -128,7 +128,7 @@ button:focus-visible,
 }
 
 .ticker-cards {
-  animation: ticker-cards 46s linear infinite;
+  animation: ticker-cards 68s linear infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
