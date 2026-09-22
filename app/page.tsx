@@ -198,7 +198,7 @@ export default function Home() {
         </p>
       </div>
 
-      {/* HERO */}
+      {/* HERO — ATENÇÃO */}
       <section className="bg-noise relative overflow-hidden px-6 py-10 sm:py-14 lg:flex lg:min-h-[calc(100svh-40px)] lg:items-center lg:py-6">
         <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
           {/* LEFT: content */}
@@ -326,7 +326,28 @@ export default function Home() {
         </Reveal>
       </div>
 
-      {/* PILARES */}
+      {/* DOR — PROBLEMA */}
+      <section className="border-b border-panel-border px-6 py-24 sm:py-32">
+        <Reveal>
+          <Eyebrow>A verdade</Eyebrow>
+        </Reveal>
+        <Reveal delay={80}>
+          <Heading>
+            Você fatura tudo isso.{" "}
+            <span className="text-gold">Então por que o dinheiro não sobra?</span>
+          </Heading>
+        </Reveal>
+
+        <Reveal delay={140}>
+          <div className="mt-14 sm:mt-16">
+            <CardTicker
+              items={DORES.map((d) => ({ label: d.text, icon: d.icon }))}
+            />
+          </div>
+        </Reveal>
+      </section>
+
+      {/* PILARES — DESENVOLVIMENTO */}
       <section className="border-b border-panel-border bg-panel/40 px-6 py-24 sm:py-32">
         <Reveal>
           <Eyebrow>O que você vai destravar</Eyebrow>
@@ -353,29 +374,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* DOR */}
+      {/* VIRADA — SOLUÇÃO */}
       <section className="border-b border-panel-border px-6 py-24 sm:py-32">
-        <Reveal>
-          <Eyebrow>A verdade</Eyebrow>
-        </Reveal>
-        <Reveal delay={80}>
-          <Heading>
-            Você fatura tudo isso.{" "}
-            <span className="text-gold">Então por que o dinheiro não sobra?</span>
-          </Heading>
-        </Reveal>
-
-        <Reveal delay={140}>
-          <div className="mt-14 sm:mt-16">
-            <CardTicker
-              items={DORES.map((d) => ({ label: d.text, icon: d.icon }))}
-            />
-          </div>
-        </Reveal>
-      </section>
-
-      {/* VIRADA */}
-      <section className="border-b border-panel-border bg-panel/40 px-6 py-24 sm:py-32">
         <Reveal>
           <Eyebrow>A virada</Eyebrow>
         </Reveal>
@@ -409,77 +409,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PARA QUEM É */}
-      <section className="border-b border-panel-border px-6 py-24 sm:py-32">
-        <Reveal>
-          <Eyebrow>Pra quem é</Eyebrow>
-        </Reveal>
-        <Reveal delay={80}>
-          <Heading>
-            O Destrava é para você{" "}
-            <span className="text-gold">se...</span>
-          </Heading>
-        </Reveal>
-        <div className="mx-auto mt-12 grid max-w-3xl grid-cols-1 gap-4 sm:grid-cols-2">
-          {PARA_QUEM.map((texto, i) => (
-            <Reveal key={texto} delay={i * 60}>
-              <div className="flex h-full items-start gap-3 rounded-2xl border border-panel-border bg-panel p-6">
-                <CheckCircle weight="fill" className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
-                <p className="text-sm text-foreground/80">{texto}</p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-      </section>
-
-      {/* RESULTADOS / DEPOIMENTOS */}
-      <section className="border-b border-panel-border px-6 py-24 sm:py-32">
-        <div className="mx-auto grid max-w-5xl items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
-          <div>
-            <Reveal>
-              <Eyebrow align="left">Última edição</Eyebrow>
-            </Reveal>
-            <Reveal delay={80}>
-              <Heading align="left">
-                Quem já passou pelo Destrava{" "}
-                <span className="text-gold">mostra como foi</span>.
-              </Heading>
-            </Reveal>
-            <Reveal delay={140}>
-              <p className="mt-6 flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-foreground/40">
-                <Quotes weight="fill" className="h-4 w-4 text-gold/70" />
-                Vídeo oficial da 1ª edição do Destrava Delivery
-              </p>
-            </Reveal>
-            <Reveal delay={200}>
-              <a
-                href={CHECKOUT_URL}
-                target="_blank"
-                rel="noreferrer"
-                className="btn-gold mt-8 inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-black"
-              >
-                Quero viver o Destrava
-                <ArrowRight weight="bold" className="h-4 w-4" />
-              </a>
-            </Reveal>
-          </div>
-
-          <Reveal delay={180} className="mx-auto w-full max-w-[288px]">
-            <div className="card-soft rounded-[2.5rem] border-4 border-panel-border bg-black p-2">
-              <div className="relative aspect-[9/19.5] w-full overflow-hidden rounded-[1.8rem] bg-black">
-                <div className="absolute top-0 left-1/2 z-10 h-4 w-20 -translate-x-1/2 rounded-b-2xl bg-black" />
-                <AutoplayVideo
-                  src="/video/ultima-edicao.mp4"
-                  className="h-full w-full object-cover"
-                />
-              </div>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* PALESTRANTES */}
-      <section className="border-b border-panel-border px-6 py-24 sm:py-32">
+      {/* PALESTRANTES — AUTORIDADE */}
+      <section className="border-b border-panel-border bg-panel/40 px-6 py-24 sm:py-32">
         <Reveal>
           <Eyebrow>Palestrantes</Eyebrow>
         </Reveal>
@@ -573,7 +504,117 @@ export default function Home() {
         </div>
       </section>
 
-      {/* INGRESSOS */}
+      {/* MENTOR — AUTORIDADE PRINCIPAL */}
+      <section className="relative overflow-hidden border-b border-panel-border">
+        <div className="mx-auto grid max-w-6xl items-center gap-0 lg:grid-cols-2">
+          <Reveal className="order-2 px-6 py-24 sm:py-32 lg:order-1 lg:px-10">
+            <Eyebrow>Quem está por trás</Eyebrow>
+            <h2 className="font-display max-w-md text-4xl leading-tight text-foreground sm:text-5xl">
+              Vini <span className="text-gold">Pires</span>
+            </h2>
+            <p className="mt-6 max-w-md text-base text-foreground/70 sm:text-lg">
+              Mentor de Delivery e iFood, Vini Pires já ajudou mais de 1.000
+              empreendedores a sair do achismo e enxergar o próprio negócio
+              com mais estratégia, lucro e clareza. Foi dessa vivência no
+              mercado que nasceu o Destrava Delivery: um evento pra quem quer
+              parar de apagar incêndio e voltar pra operação com outra
+              cabeça.
+            </p>
+            <a
+              href="https://www.instagram.com/vinipiresoficial"
+              target="_blank"
+              rel="noreferrer"
+              className="btn-gold-outline mt-8 inline-flex w-fit items-center gap-2 rounded-full px-6 py-3 text-sm font-bold uppercase tracking-wide text-gold"
+            >
+              <InstagramLogo weight="fill" className="h-4 w-4" />
+              @vinipiresoficial
+            </a>
+          </Reveal>
+          <Reveal delay={140} className="order-1 lg:order-2">
+            <div className="aspect-[4/5] w-full lg:aspect-auto lg:h-full">
+              <Image
+                src="/brand/vini-hero.jpg"
+                alt="Vini Pires"
+                width={1080}
+                height={1080}
+                className="h-full w-full object-cover"
+                priority
+              />
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* RESULTADOS / PROVA SOCIAL */}
+      <section className="border-b border-panel-border bg-panel/40 px-6 py-24 sm:py-32">
+        <div className="mx-auto grid max-w-5xl items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
+          <div>
+            <Reveal>
+              <Eyebrow align="left">Última edição</Eyebrow>
+            </Reveal>
+            <Reveal delay={80}>
+              <Heading align="left">
+                Quem já passou pelo Destrava{" "}
+                <span className="text-gold">mostra como foi</span>.
+              </Heading>
+            </Reveal>
+            <Reveal delay={140}>
+              <p className="mt-6 flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-foreground/40">
+                <Quotes weight="fill" className="h-4 w-4 text-gold/70" />
+                Vídeo oficial da 1ª edição do Destrava Delivery
+              </p>
+            </Reveal>
+            <Reveal delay={200}>
+              <a
+                href={CHECKOUT_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="btn-gold mt-8 inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-black"
+              >
+                Quero viver o Destrava
+                <ArrowRight weight="bold" className="h-4 w-4" />
+              </a>
+            </Reveal>
+          </div>
+
+          <Reveal delay={180} className="mx-auto w-full max-w-[288px]">
+            <div className="card-soft rounded-[2.5rem] border-4 border-panel-border bg-black p-2">
+              <div className="relative aspect-[9/19.5] w-full overflow-hidden rounded-[1.8rem] bg-black">
+                <div className="absolute top-0 left-1/2 z-10 h-4 w-20 -translate-x-1/2 rounded-b-2xl bg-black" />
+                <AutoplayVideo
+                  src="/video/ultima-edicao.mp4"
+                  className="h-full w-full object-cover"
+                />
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* PARA QUEM É — QUALIFICAÇÃO */}
+      <section className="border-b border-panel-border px-6 py-24 sm:py-32">
+        <Reveal>
+          <Eyebrow>Pra quem é</Eyebrow>
+        </Reveal>
+        <Reveal delay={80}>
+          <Heading>
+            O Destrava é para você{" "}
+            <span className="text-gold">se...</span>
+          </Heading>
+        </Reveal>
+        <div className="mx-auto mt-12 grid max-w-3xl grid-cols-1 gap-4 sm:grid-cols-2">
+          {PARA_QUEM.map((texto, i) => (
+            <Reveal key={texto} delay={i * 60}>
+              <div className="flex h-full items-start gap-3 rounded-2xl border border-panel-border bg-panel p-6">
+                <CheckCircle weight="fill" className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
+                <p className="text-sm text-foreground/80">{texto}</p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
+      {/* INGRESSOS — AÇÃO */}
       <section
         className="border-b border-panel-border bg-panel/40 px-6 py-24 sm:py-32"
         id="ingressos"
@@ -646,49 +687,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* MENTOR */}
-      <section className="relative overflow-hidden border-b border-panel-border">
-        <div className="mx-auto grid max-w-6xl items-center gap-0 lg:grid-cols-2">
-          <Reveal className="order-2 px-6 py-24 sm:py-32 lg:order-1 lg:px-10">
-            <Eyebrow>Quem está por trás</Eyebrow>
-            <h2 className="font-display max-w-md text-4xl leading-tight text-foreground sm:text-5xl">
-              Vini <span className="text-gold">Pires</span>
-            </h2>
-            <p className="mt-6 max-w-md text-base text-foreground/70 sm:text-lg">
-              Mentor de Delivery e iFood, Vini Pires já ajudou mais de 1.000
-              empreendedores a sair do achismo e enxergar o próprio negócio
-              com mais estratégia, lucro e clareza. Foi dessa vivência no
-              mercado que nasceu o Destrava Delivery: um evento pra quem quer
-              parar de apagar incêndio e voltar pra operação com outra
-              cabeça.
-            </p>
-            <a
-              href="https://www.instagram.com/vinipiresoficial"
-              target="_blank"
-              rel="noreferrer"
-              className="btn-gold-outline mt-8 inline-flex w-fit items-center gap-2 rounded-full px-6 py-3 text-sm font-bold uppercase tracking-wide text-gold"
-            >
-              <InstagramLogo weight="fill" className="h-4 w-4" />
-              @vinipiresoficial
-            </a>
-          </Reveal>
-          <Reveal delay={140} className="order-1 lg:order-2">
-            <div className="aspect-[4/5] w-full lg:aspect-auto lg:h-full">
-              <Image
-                src="/brand/vini-hero.jpg"
-                alt="Vini Pires"
-                width={1080}
-                height={1080}
-                className="h-full w-full object-cover"
-                priority
-              />
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
       {/* LOCAL */}
-      <section className="border-b border-panel-border bg-panel/40 px-6 py-24 sm:py-32">
+      <section className="border-b border-panel-border px-6 py-24 sm:py-32">
         <Reveal>
           <Eyebrow>Onde será</Eyebrow>
         </Reveal>
@@ -751,8 +751,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FAQ */}
-      <section className="px-6 py-24 sm:py-32">
+      {/* FAQ — OBJEÇÕES */}
+      <section className="bg-panel/40 px-6 py-24 sm:py-32">
         <Reveal>
           <Eyebrow>Dúvidas</Eyebrow>
         </Reveal>
@@ -766,7 +766,7 @@ export default function Home() {
         </Reveal>
       </section>
 
-      {/* CTA FINAL */}
+      {/* CTA FINAL — AÇÃO */}
       <section className="bg-noise border-t border-panel-border px-6 py-24 sm:py-32 text-center">
         <Reveal>
           <h2 className="font-display mx-auto max-w-2xl text-3xl text-foreground/90 sm:text-4xl">
