@@ -27,7 +27,6 @@ import {
   PiggyBank,
   Quotes,
   XCircle,
-  FlagCheckered,
 } from "@phosphor-icons/react/dist/ssr";
 import Countdown from "./components/Countdown";
 import AutoplayVideo from "./components/AutoplayVideo";
@@ -699,45 +698,43 @@ export default function Home() {
             <span className="text-gold">em 4 passos</span>.
           </Heading>
         </Reveal>
-        <div className="mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mx-auto mt-16 grid max-w-5xl grid-cols-1 gap-y-10 gap-x-4 sm:grid-cols-4">
           {[
             {
               n: "01",
-              icon: Ticket,
               title: "Escolha o ingresso",
               text: "Standard, Duplo ou VIP Premium. Cada um com benefícios diferentes.",
             },
             {
               n: "02",
-              icon: CalendarBlank,
               title: "Garanta sua vaga",
               text: "16 e 17 de novembro, no Espaço Vitta Eventos, em São Paulo.",
             },
             {
               n: "03",
-              icon: UsersThree,
               title: "Viva os 2 dias",
               text: "Estratégia, operação, financeiro, marketing e vendas, com quem vive a operação.",
             },
             {
               n: "04",
-              icon: FlagCheckered,
               title: "Saia com plano claro",
               text: "Volte pra operação sabendo exatamente o que precisa mudar primeiro.",
             },
           ].map((step, i) => (
             <Reveal key={step.n} delay={i * 80}>
-              <div className="h-full rounded-2xl border border-panel-border bg-panel p-6">
-                <div className="flex items-center gap-2">
-                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-gold/15 text-xs font-bold text-gold">
-                    {step.n}
-                  </span>
-                  <step.icon weight="duotone" className="h-5 w-5 text-gold" />
-                </div>
+              <div className="relative flex flex-col items-center text-center">
+                {i !== 0 && (
+                  <span className="absolute right-1/2 top-5 -z-10 hidden h-px w-full bg-gold/30 sm:block" />
+                )}
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-gold bg-background text-sm font-bold text-gold">
+                  {step.n}
+                </span>
                 <p className="font-display mt-4 text-base text-foreground">
                   {step.title}
                 </p>
-                <p className="mt-2 text-sm text-foreground/60">{step.text}</p>
+                <p className="mt-2 max-w-[14rem] text-sm text-foreground/60">
+                  {step.text}
+                </p>
               </div>
             </Reveal>
           ))}
