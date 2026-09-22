@@ -26,6 +26,8 @@ import {
   Compass,
   PiggyBank,
   Quotes,
+  XCircle,
+  FlagCheckered,
 } from "@phosphor-icons/react/dist/ssr";
 import Countdown from "./components/Countdown";
 import AutoplayVideo from "./components/AutoplayVideo";
@@ -96,13 +98,32 @@ const CREDIBILIDADE = [
   { label: "2 dias fora do escritório", icon: TrendUp },
 ];
 
-const PARA_QUEM = [
+const E_PARA_VOCE = [
   "Seu delivery fatura, mas o lucro não acompanha.",
   "Você ainda precisa estar em tudo pro negócio funcionar.",
   "Sua operação vive apagando incêndio.",
   "Você depende demais das plataformas pra gerar venda.",
   "Você trabalha muito, mas sente que não cresce com previsibilidade.",
   "Você quer deixar de ser só operador e agir como empresário.",
+];
+
+const NAO_E_PARA = [
+  "Você não tem delivery nem trabalha com gestão de restaurante.",
+  "Não está disposto a rever como opera o próprio negócio.",
+  "Está plenamente satisfeito com o lucro que tem hoje.",
+];
+
+const TODOS_BENEFICIOS = [
+  "Acesso aos 2 dias de evento",
+  "Conteúdo completo da imersão",
+  "Kit participante",
+  "2 ingressos",
+  "Assento privilegiado na frente do palco",
+  "Acesso à área VIP",
+  "Kit exclusivo",
+  "Networking exclusivo",
+  "Jantar exclusivo após o 1º dia",
+  "Refeição exclusiva nos 2 dias",
 ];
 
 const TICKETS = [
@@ -136,6 +157,8 @@ const TICKETS = [
     price: "1.497",
     installment: "12x R$ 170,31",
     features: [
+      "Acesso aos 2 dias de evento",
+      "Conteúdo completo da imersão",
       "Assento privilegiado na frente do palco",
       "Acesso à área VIP",
       "Kit exclusivo",
@@ -189,10 +212,19 @@ export default function Home() {
   return (
     <div className="flex flex-col bg-background">
       {/* FAIXA DE LOTE */}
-      <div className="bg-panel px-6 py-2.5 text-center">
+      <div className="sticky top-0 z-30 flex items-center justify-center gap-4 bg-panel px-6 py-2.5 text-center">
         <p className="text-xs font-semibold uppercase tracking-wide text-foreground/80 sm:text-sm">
           Lote atual encerra em <Countdown target={LOTE_DEADLINE} />
         </p>
+        <a
+          href={CHECKOUT_URL}
+          target="_blank"
+          rel="noreferrer"
+          className="btn-gold hidden shrink-0 items-center gap-1.5 rounded-full px-4 py-1.5 text-[11px] font-bold uppercase tracking-wide text-black sm:inline-flex"
+        >
+          Quero minha vaga
+          <ArrowRight weight="bold" className="h-3.5 w-3.5" />
+        </a>
       </div>
 
       {/* HERO — ATENÇÃO */}
@@ -407,6 +439,27 @@ export default function Home() {
         </div>
       </section>
 
+      {/* NÚMERO GIGANTE */}
+      <section className="border-b border-panel-border bg-panel/40 px-6 py-16 sm:py-20">
+        <Reveal>
+          <div className="mx-auto flex max-w-4xl flex-col items-center gap-6 rounded-2xl border border-panel-border bg-panel p-8 sm:flex-row sm:gap-10 sm:p-10">
+            <p className="font-display shrink-0 text-6xl leading-none text-gold sm:text-7xl">
+              2 DIAS
+            </p>
+            <div className="hidden h-16 w-px bg-panel-border sm:block" />
+            <div className="text-center sm:text-left">
+              <p className="font-display text-xl text-foreground sm:text-2xl">
+                Pra trocar tentativa e erro por um caminho claro de ação.
+              </p>
+              <p className="mt-2 text-sm text-foreground/60">
+                Você conecta estratégia, operação, financeiro, marketing e
+                vendas, e sai sabendo onde concentrar sua atenção primeiro.
+              </p>
+            </div>
+          </div>
+        </Reveal>
+      </section>
+
       {/* PALESTRANTES — AUTORIDADE */}
       <section className="border-b border-panel-border bg-panel/40 px-6 py-24 sm:py-32">
         <Reveal>
@@ -596,16 +649,94 @@ export default function Home() {
         </Reveal>
         <Reveal delay={80}>
           <Heading>
-            O Destrava é para você{" "}
-            <span className="text-gold">se...</span>
+            O Destrava não é{" "}
+            <span className="text-gold">para qualquer um</span>.
           </Heading>
         </Reveal>
-        <div className="mx-auto mt-12 grid max-w-3xl grid-cols-1 gap-4 sm:grid-cols-2">
-          {PARA_QUEM.map((texto, i) => (
-            <Reveal key={texto} delay={i * 60}>
-              <div className="flex h-full items-start gap-3 rounded-2xl border border-panel-border bg-panel p-6">
-                <CheckCircle weight="fill" className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
-                <p className="text-sm text-foreground/80">{texto}</p>
+        <div className="mx-auto mt-12 grid max-w-4xl grid-cols-1 gap-4 lg:grid-cols-2">
+          <Reveal delay={100}>
+            <div className="h-full rounded-2xl border border-panel-border bg-panel p-8">
+              <p className="mb-5 text-xs font-semibold uppercase tracking-widest text-foreground/40">
+                Não é para quem
+              </p>
+              <ul className="space-y-4">
+                {NAO_E_PARA.map((texto) => (
+                  <li key={texto} className="flex items-start gap-3">
+                    <XCircle weight="fill" className="mt-0.5 h-5 w-5 shrink-0 text-foreground/30" />
+                    <p className="text-sm text-foreground/50">{texto}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </Reveal>
+          <Reveal delay={160}>
+            <div className="h-full rounded-2xl border border-gold/30 bg-panel p-8">
+              <p className="mb-5 text-xs font-semibold uppercase tracking-widest text-gold/70">
+                É para você que
+              </p>
+              <ul className="space-y-4">
+                {E_PARA_VOCE.map((texto) => (
+                  <li key={texto} className="flex items-start gap-3">
+                    <CheckCircle weight="fill" className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
+                    <p className="text-sm text-foreground/80">{texto}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* COMO FUNCIONA */}
+      <section className="border-b border-panel-border px-6 py-24 sm:py-32">
+        <Reveal>
+          <Eyebrow>Como funciona</Eyebrow>
+        </Reveal>
+        <Reveal delay={80}>
+          <Heading>
+            Do ingresso ao plano claro{" "}
+            <span className="text-gold">em 4 passos</span>.
+          </Heading>
+        </Reveal>
+        <div className="mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            {
+              n: "01",
+              icon: Ticket,
+              title: "Escolha o ingresso",
+              text: "Standard, Duplo ou VIP Premium. Cada um com benefícios diferentes.",
+            },
+            {
+              n: "02",
+              icon: CalendarBlank,
+              title: "Garanta sua vaga",
+              text: "16 e 17 de novembro, no Espaço Vitta Eventos, em São Paulo.",
+            },
+            {
+              n: "03",
+              icon: UsersThree,
+              title: "Viva os 2 dias",
+              text: "Estratégia, operação, financeiro, marketing e vendas, com quem vive a operação.",
+            },
+            {
+              n: "04",
+              icon: FlagCheckered,
+              title: "Saia com plano claro",
+              text: "Volte pra operação sabendo exatamente o que precisa mudar primeiro.",
+            },
+          ].map((step, i) => (
+            <Reveal key={step.n} delay={i * 80}>
+              <div className="h-full rounded-2xl border border-panel-border bg-panel p-6">
+                <div className="flex items-center gap-2">
+                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-gold/15 text-xs font-bold text-gold">
+                    {step.n}
+                  </span>
+                  <step.icon weight="duotone" className="h-5 w-5 text-gold" />
+                </div>
+                <p className="font-display mt-4 text-base text-foreground">
+                  {step.title}
+                </p>
+                <p className="mt-2 text-sm text-foreground/60">{step.text}</p>
               </div>
             </Reveal>
           ))}
@@ -657,16 +788,29 @@ export default function Home() {
                 <p className="text-xs text-foreground/50">
                   em {ticket.installment}
                 </p>
-                <ul className="mt-6 flex-1 space-y-3 text-sm text-foreground/70">
-                  {ticket.features.map((f) => (
-                    <li key={f} className="flex gap-2">
-                      <CheckCircle
-                        weight="fill"
-                        className="h-5 w-5 shrink-0 text-gold"
-                      />
-                      {f}
-                    </li>
-                  ))}
+                <ul className="mt-6 flex-1 space-y-3 text-sm">
+                  {TODOS_BENEFICIOS.map((f) => {
+                    const incluso = ticket.features.includes(f);
+                    return (
+                      <li
+                        key={f}
+                        className={`flex gap-2 ${incluso ? "text-foreground/70" : "text-foreground/25"}`}
+                      >
+                        {incluso ? (
+                          <CheckCircle
+                            weight="fill"
+                            className="h-5 w-5 shrink-0 text-gold"
+                          />
+                        ) : (
+                          <XCircle
+                            weight="regular"
+                            className="h-5 w-5 shrink-0 text-foreground/20"
+                          />
+                        )}
+                        {f}
+                      </li>
+                    );
+                  })}
                 </ul>
                 <a
                   href={CHECKOUT_URL}
