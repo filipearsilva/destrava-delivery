@@ -84,12 +84,12 @@ const DORES = [
 ];
 
 const VIRADA = [
-  { label: "Estratégia", text: "De decisão no achismo, para decisão baseada no negócio.", icon: Compass },
-  { label: "Operação", text: "De apagar incêndio, para processo que funciona.", icon: Gauge },
-  { label: "Financeiro", text: "De faturamento sem clareza, para visão real de margem e lucro.", icon: PiggyBank },
-  { label: "Marketing", text: "De depender de cupom, para construir demanda própria.", icon: Megaphone },
-  { label: "Vendas", text: "De esperar pedido, para criar oportunidade nova.", icon: TrendUp },
-  { label: "Networking", text: "De resolver tudo sozinho, para trocar com quem também está no jogo.", icon: UsersFour },
+  { label: "Estratégia", before: "Decisão no achismo", after: "Decisão baseada no negócio", icon: Compass },
+  { label: "Operação", before: "Apagar incêndio", after: "Processo que funciona", icon: Gauge },
+  { label: "Financeiro", before: "Faturamento sem clareza", after: "Visão real de margem e lucro", icon: PiggyBank },
+  { label: "Marketing", before: "Depender de cupom", after: "Construir demanda própria", icon: Megaphone },
+  { label: "Vendas", before: "Esperar pedido", after: "Criar oportunidade nova", icon: TrendUp },
+  { label: "Networking", before: "Resolver tudo sozinho", after: "Trocar com quem também está no jogo", icon: UsersFour },
 ];
 
 const CREDIBILIDADE = [
@@ -393,16 +393,43 @@ export default function Home() {
             e gestão.
           </p>
         </Reveal>
-        <div className="mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-auto mt-12 max-w-3xl overflow-hidden rounded-2xl border border-panel-border">
+          <div className="hidden border-b border-panel-border bg-panel/60 px-6 py-3 sm:flex">
+            <p className="w-40 shrink-0 text-xs font-semibold uppercase tracking-widest text-foreground/40">
+              Área
+            </p>
+            <div className="flex flex-1 items-center gap-3">
+              <p className="flex-1 text-xs font-semibold uppercase tracking-widest text-foreground/40">
+                Antes
+              </p>
+              <span className="w-4" />
+              <p className="flex-1 text-xs font-semibold uppercase tracking-widest text-gold/70">
+                Depois
+              </p>
+            </div>
+          </div>
           {VIRADA.map((v, i) => (
             <Reveal key={v.label} delay={i * 70}>
-              <div className="card-soft flex h-full flex-col gap-3 rounded-2xl border border-panel-border bg-panel p-6">
-                <v.icon weight="duotone" className="h-7 w-7 text-gold" />
-                <span className="block h-[3px] w-6 bg-gold" />
-                <p className="text-xs font-semibold uppercase tracking-widest text-gold/70">
-                  {v.label}
-                </p>
-                <p className="text-sm text-foreground/80">{v.text}</p>
+              <div
+                className={`flex flex-col gap-3 px-6 py-5 sm:flex-row sm:items-center sm:gap-6 ${
+                  i !== 0 ? "border-t border-panel-border" : ""
+                } ${i % 2 === 1 ? "bg-panel/30" : ""}`}
+              >
+                <div className="flex w-40 shrink-0 items-center gap-2">
+                  <v.icon weight="duotone" className="h-5 w-5 text-gold" />
+                  <p className="text-xs font-semibold uppercase tracking-widest text-foreground/60">
+                    {v.label}
+                  </p>
+                </div>
+                <div className="flex flex-1 items-center gap-3">
+                  <p className="flex-1 text-sm text-foreground/40 line-through decoration-foreground/25">
+                    {v.before}
+                  </p>
+                  <ArrowRight weight="bold" className="h-4 w-4 shrink-0 text-gold" />
+                  <p className="flex-1 text-sm font-semibold text-foreground">
+                    {v.after}
+                  </p>
+                </div>
               </div>
             </Reveal>
           ))}
