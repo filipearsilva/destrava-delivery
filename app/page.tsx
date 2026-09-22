@@ -11,7 +11,6 @@ import {
   Target,
   Lightbulb,
   TrendUp,
-  LockSimple,
   CheckCircle,
   ArrowRight,
   InstagramLogo,
@@ -281,8 +280,14 @@ export default function Home() {
       <section className="relative border-b border-panel-border px-6 pt-24 pb-24 sm:pt-32 sm:pb-32">
         <div className="mx-auto grid max-w-5xl items-center gap-10 md:grid-cols-[220px_1fr]">
           <Reveal>
-            <div className="mx-auto flex h-44 w-44 items-center justify-center rounded-full border-2 border-gold/60 bg-panel font-display text-4xl text-gold">
-              VP
+            <div className="mx-auto h-44 w-44 overflow-hidden rounded-full border-2 border-gold/60 bg-panel">
+              <Image
+                src="/brand/vini-portrait.jpg"
+                alt="Vini Pires"
+                width={490}
+                height={1103}
+                className="h-full w-full object-cover object-top"
+              />
             </div>
           </Reveal>
           <Reveal delay={120}>
@@ -418,68 +423,85 @@ export default function Home() {
         </Reveal>
 
         <div className="mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <Reveal delay={140}>
-            <div className="overflow-hidden rounded-2xl border border-panel-border bg-panel">
-              <Image
-                src="/brand/vini-portrait.jpg"
-                alt="Vini Pires"
-                width={252}
-                height={332}
-                className="h-64 w-full object-cover"
-              />
-              <div className="p-6">
-                <span className="mb-3 block h-[3px] w-6 bg-gold" />
-                <p className="font-display text-lg text-foreground">
-                  Vini Pires
-                </p>
-                <p className="mt-1 text-sm text-foreground/60">
-                  Mentor de Delivery e iFood, já ajudou mais de 1.000
-                  empreendedores a crescer com mais estratégia e clareza.
-                </p>
-              </div>
-            </div>
-          </Reveal>
-
-          <Reveal delay={200}>
-            <div className="overflow-hidden rounded-2xl border border-panel-border bg-panel">
-              <Image
-                src="/brand/gabriel-viana.jpg"
-                alt="Gabriel Viana"
-                width={1080}
-                height={1080}
-                className="h-64 w-full object-cover"
-              />
-              <div className="p-6">
-                <span className="mb-3 block h-[3px] w-6 bg-gold" />
-                <p className="font-display text-lg text-foreground">
-                  Gabriel Viana
-                </p>
-                <p className="mt-1 text-sm text-foreground/60">
-                  Conhecido como Mago do iFood, mentor de gestores e donos de
-                  restaurante em gestão de delivery.
-                </p>
-              </div>
-            </div>
-          </Reveal>
-
-          {Array.from({ length: 4 }).map((_, i) => (
-            <Reveal key={i} delay={180 + i * 60}>
-              <div className="flex h-full flex-col overflow-hidden rounded-2xl border border-dashed border-panel-border bg-panel/60">
-                <div className="flex h-64 w-full items-center justify-center bg-panel">
-                  <LockSimple weight="fill" className="h-8 w-8 text-gold/40" />
-                </div>
+          {[
+            {
+              name: "Vini Pires",
+              photo: "/brand/vini-portrait.jpg",
+              w: 490,
+              h: 1103,
+              pos: "object-top",
+              bio: "Mentor de Delivery e iFood, já ajudou mais de 1.000 empreendedores a crescer com mais estratégia e clareza.",
+            },
+            {
+              name: "Gabriel Viana",
+              photo: "/brand/gabriel-viana.jpg",
+              w: 2387,
+              h: 3182,
+              pos: "object-top",
+              bio: "Conhecido como Mago do iFood, mentor de gestores e donos de restaurante em gestão de delivery.",
+            },
+            {
+              name: "William Flores",
+              photo: "/brand/william-flores.jpg",
+              w: 1086,
+              h: 1448,
+              pos: "object-top",
+              bio: "Especialista em multimarcas no delivery, foco em estratégia real e mais lucro e liberdade pro negócio.",
+            },
+            {
+              name: "Rafael Maia",
+              photo: "/brand/rafael-maia.jpg",
+              w: 1086,
+              h: 1448,
+              pos: "object-top",
+              bio: "Empresário, palestrante e mentor, com foco em operação que gera resultado e mentalidade empresarial.",
+            },
+            {
+              name: "Alecsander Xavier",
+              photo: "/brand/alecsander-xavier.jpg",
+              w: 1949,
+              h: 2087,
+              pos: "object-right",
+              bio: "Palestrante confirmado do Destrava Delivery 2.0 — credencial completa em breve.",
+            },
+          ].map((p, i) => (
+            <Reveal key={p.name} delay={140 + i * 60}>
+              <div className="overflow-hidden rounded-2xl border border-panel-border bg-panel">
+                <Image
+                  src={p.photo}
+                  alt={p.name}
+                  width={p.w}
+                  height={p.h}
+                  className={`h-64 w-full object-cover ${p.pos}`}
+                />
                 <div className="p-6">
-                  <span className="mb-3 block h-[3px] w-6 bg-gold/40" />
-                  <p className="font-display text-lg text-foreground/40">
-                    Em breve
+                  <span className="mb-3 block h-[3px] w-6 bg-gold" />
+                  <p className="font-display text-lg text-foreground">
+                    {p.name}
                   </p>
-                  <p className="mt-1 text-sm text-foreground/30">
-                    Nome e credencial confirmados em breve.
-                  </p>
+                  <p className="mt-1 text-sm text-foreground/60">{p.bio}</p>
                 </div>
               </div>
             </Reveal>
           ))}
+
+          <Reveal delay={440}>
+            <div className="flex h-full flex-col overflow-hidden rounded-2xl border border-panel-border bg-panel">
+              <div className="flex h-64 w-full items-center justify-center bg-panel font-display text-4xl text-gold">
+                GH
+              </div>
+              <div className="p-6">
+                <span className="mb-3 block h-[3px] w-6 bg-gold" />
+                <p className="font-display text-lg text-foreground">
+                  Glaucia Hortega
+                </p>
+                <p className="mt-1 text-sm text-foreground/60">
+                  Palestra "Quem Decide, Destrava": mentalidade e decisão para
+                  quem toca o próprio negócio.
+                </p>
+              </div>
+            </div>
+          </Reveal>
         </div>
       </section>
 
