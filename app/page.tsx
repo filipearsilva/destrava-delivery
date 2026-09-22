@@ -219,8 +219,8 @@ export default function Home() {
                 src="/brand/logo-horizontal.png"
                 alt="Destrava Delivery"
                 width={2000}
-                height={665}
-                className="mb-5 h-[70px] w-auto lg:h-[78px]"
+                height={499}
+                className="mb-5 h-[56px] w-auto lg:h-[62px]"
                 priority
               />
             </Reveal>
