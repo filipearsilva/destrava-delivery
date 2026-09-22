@@ -361,7 +361,7 @@ export default function Home() {
             <span className="text-gold">É falta de clareza e estrutura</span>.
           </Heading>
         </Reveal>
-        <div className="mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-auto mt-12 grid max-w-6xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {PILARES.map((p, i) => (
             <Reveal key={p.label} delay={i * 80}>
               <div className="card-soft h-full rounded-2xl border border-panel-border bg-panel p-8">
@@ -396,7 +396,7 @@ export default function Home() {
             e gestão.
           </p>
         </Reveal>
-        <div className="mx-auto mt-12 max-w-3xl overflow-hidden rounded-2xl border border-panel-border">
+        <div className="mx-auto mt-12 max-w-6xl overflow-hidden rounded-2xl border border-panel-border">
           <div className="hidden border-b border-panel-border bg-panel/60 px-6 py-3 sm:flex">
             <p className="w-40 shrink-0 text-xs font-semibold uppercase tracking-widest text-foreground/40">
               Área
@@ -442,7 +442,7 @@ export default function Home() {
       {/* NÚMERO GIGANTE */}
       <section className="border-b border-panel-border bg-panel/40 px-6 py-16 sm:py-20">
         <Reveal>
-          <div className="mx-auto flex max-w-4xl flex-col items-center gap-6 rounded-2xl border border-panel-border bg-panel p-8 sm:flex-row sm:gap-10 sm:p-10">
+          <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 rounded-2xl border border-panel-border bg-panel p-8 sm:flex-row sm:gap-10 sm:p-10">
             <p className="font-display shrink-0 text-6xl leading-none text-gold sm:text-7xl">
               2 DIAS
             </p>
@@ -472,7 +472,7 @@ export default function Home() {
           </Heading>
         </Reveal>
 
-        <div className="mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-auto mt-12 grid max-w-6xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {[
             {
               name: "Vini Pires",
@@ -556,11 +556,11 @@ export default function Home() {
       </section>
 
       {/* MENTOR — AUTORIDADE PRINCIPAL */}
-      <section className="relative overflow-hidden border-b border-panel-border">
-        <div className="mx-auto grid max-w-6xl items-center gap-0 lg:grid-cols-2">
-          <Reveal className="order-2 px-6 py-24 sm:py-32 lg:order-1 lg:px-10">
+      <section className="border-b border-panel-border bg-panel/40 px-6 py-24 sm:py-32">
+        <div className="mx-auto grid max-w-6xl items-start gap-10 lg:grid-cols-2 lg:gap-16">
+          <Reveal className="order-2 lg:order-1">
             <Eyebrow>Quem está por trás</Eyebrow>
-            <h2 className="font-display max-w-md text-4xl leading-tight text-foreground sm:text-5xl">
+            <h2 className="font-display text-4xl leading-tight text-foreground sm:text-5xl">
               Vini <span className="text-gold">Pires</span>
             </h2>
             <p className="mt-6 max-w-md text-base text-foreground/70 sm:text-lg">
@@ -582,7 +582,7 @@ export default function Home() {
             </a>
           </Reveal>
           <Reveal delay={140} className="order-1 lg:order-2">
-            <div className="aspect-[4/5] w-full lg:aspect-auto lg:h-full">
+            <div className="aspect-[4/5] w-full overflow-hidden rounded-2xl border border-panel-border bg-panel">
               <Image
                 src="/brand/vini-hero.jpg"
                 alt="Vini Pires"
@@ -598,7 +598,7 @@ export default function Home() {
 
       {/* RESULTADOS / PROVA SOCIAL */}
       <section className="border-b border-panel-border bg-panel/40 px-6 py-24 sm:py-32">
-        <div className="mx-auto grid max-w-5xl items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
+        <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
           <div>
             <Reveal>
               <Eyebrow align="left">Última edição</Eyebrow>
@@ -653,7 +653,7 @@ export default function Home() {
             <span className="text-gold">para qualquer um</span>.
           </Heading>
         </Reveal>
-        <div className="mx-auto mt-12 grid max-w-4xl grid-cols-1 gap-4 lg:grid-cols-2">
+        <div className="mx-auto mt-12 grid max-w-6xl grid-cols-1 gap-4 lg:grid-cols-2">
           <Reveal delay={100}>
             <div className="h-full rounded-2xl border border-panel-border bg-panel p-8">
               <p className="mb-5 text-xs font-semibold uppercase tracking-widest text-foreground/40">
@@ -698,7 +698,7 @@ export default function Home() {
             <span className="text-gold">em 4 passos</span>.
           </Heading>
         </Reveal>
-        <div className="mx-auto mt-16 grid max-w-5xl grid-cols-1 gap-y-10 gap-x-4 sm:grid-cols-4">
+        <div className="mx-auto mt-16 grid max-w-6xl grid-cols-1 gap-y-10 gap-x-4 sm:grid-cols-4">
           {[
             {
               n: "01",
@@ -756,7 +756,7 @@ export default function Home() {
           </Heading>
         </Reveal>
 
-        <div className="mx-auto mt-12 grid max-w-5xl gap-6 md:grid-cols-3">
+        <div className="mx-auto mt-12 grid max-w-6xl gap-6 md:grid-cols-3">
           {TICKETS.map((ticket, i) => (
             <Reveal key={ticket.name} delay={i * 100}>
               <div
@@ -838,7 +838,7 @@ export default function Home() {
           </Heading>
         </Reveal>
 
-        <div className="mx-auto mt-12 grid max-w-5xl gap-8 lg:grid-cols-[1fr_1.3fr]">
+        <div className="mx-auto mt-12 grid max-w-6xl gap-8 lg:grid-cols-[1fr_1.3fr]">
           <Reveal delay={140}>
             <div className="flex h-full flex-col justify-center gap-6 rounded-2xl border border-panel-border bg-panel p-8">
               <div className="flex items-start gap-3">
