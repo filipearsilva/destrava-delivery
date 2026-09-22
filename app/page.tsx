@@ -323,10 +323,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* TICKER — faixa diagonal */}
+      {/* TICKER — faixa horizontal */}
       <div className="relative z-20">
         <Reveal delay={420}>
-          <Ticker items={CREDIBILIDADE} />
+          <Ticker items={CREDIBILIDADE} diagonal={false} />
         </Reveal>
       </div>
 
