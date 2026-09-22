@@ -29,7 +29,7 @@ import {
   XCircle,
 } from "@phosphor-icons/react/dist/ssr";
 import Countdown from "./components/Countdown";
-import AutoplayVideo from "./components/AutoplayVideo";
+import VideoCarousel from "./components/VideoCarousel";
 import Faq from "./components/Faq";
 import Reveal from "./components/Reveal";
 import Ticker from "./components/Ticker";
@@ -95,6 +95,12 @@ const CREDIBILIDADE = [
   { label: "Empresários trocando experiência real", icon: UsersThree },
   { label: "Conteúdo direto da operação", icon: Lightbulb },
   { label: "2 dias fora do escritório", icon: TrendUp },
+];
+
+const VIDEOS = [
+  { src: "/video/ultima-edicao.mp4", label: "Vídeo oficial da 1ª edição do Destrava Delivery" },
+  { src: "/video/depoimento-1.mp4", label: "Recado do Vini Pires sobre o Destrava Delivery" },
+  { src: "/video/depoimento-2.mp4", label: "Recado do Vini Pires sobre o Destrava Delivery" },
 ];
 
 const E_PARA_VOCE = [
@@ -252,7 +258,7 @@ export default function Home() {
                 alt="Destrava Delivery"
                 width={2000}
                 height={499}
-                className="mb-8 h-[56px] w-auto lg:h-[64px]"
+                className="mb-8 h-[56px] w-auto lg:h-[80px]"
                 priority
               />
             </Reveal>
@@ -626,7 +632,7 @@ export default function Home() {
             <Reveal delay={140}>
               <p className="mt-6 flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-foreground/40">
                 <Quotes weight="fill" className="h-4 w-4 text-gold/70" />
-                Vídeo oficial da 1ª edição do Destrava Delivery
+                Use as setas para ver mais vídeos
               </p>
             </Reveal>
             <Reveal delay={200}>
@@ -642,16 +648,8 @@ export default function Home() {
             </Reveal>
           </div>
 
-          <Reveal delay={180} className="mx-auto w-full max-w-[288px]">
-            <div className="card-soft rounded-[2.5rem] border-4 border-panel-border bg-black p-2">
-              <div className="relative aspect-[9/19.5] w-full overflow-hidden rounded-[1.8rem] bg-black">
-                <div className="absolute top-0 left-1/2 z-10 h-4 w-20 -translate-x-1/2 rounded-b-2xl bg-black" />
-                <AutoplayVideo
-                  src="/video/ultima-edicao.mp4"
-                  className="h-full w-full object-cover"
-                />
-              </div>
-            </div>
+          <Reveal delay={180}>
+            <VideoCarousel items={VIDEOS} />
           </Reveal>
         </div>
       </section>
