@@ -41,64 +41,74 @@ const LOTE_DEADLINE = "2026-11-10T23:59:59-03:00";
 const PILARES = [
   {
     label: "Estratégia",
-    text: "Pare de tomar decisões no achismo.",
+    text: "Pare de operar no escuro e enxergue os gargalos que travam o negócio.",
     icon: ChartLineUp,
   },
   {
     label: "Operação",
-    text: "Organize o negócio para crescer com mais eficiência.",
+    text: "Monte processos pra o delivery funcionar sem depender de você o tempo todo.",
     icon: GearSix,
   },
   {
     label: "Financeiro",
-    text: "Entenda onde está o seu lucro e onde ele está indo embora.",
+    text: "Faturamento não é lucro. Entenda margem, custo e pra onde o dinheiro vai.",
     icon: Wallet,
   },
   {
     label: "Marketing",
-    text: "Posicione seu delivery para atrair mais clientes.",
+    text: "Pare de depender só de cupom e plataforma pra aparecer.",
     icon: Megaphone,
   },
   {
     label: "Vendas",
-    text: "Aprenda a criar oportunidades para vender mais.",
+    text: "Transforme mais oportunidades em pedidos, além do que a plataforma entrega.",
     icon: TrendUp,
   },
   {
     label: "Networking",
-    text: "Conecte-se com quem também está no jogo.",
+    text: "Converse com quem vive os mesmos desafios que você todo dia.",
     icon: Handshake,
   },
 ];
 
 const DORES = [
-  { label: "Estratégia", text: "Toma decisão no achismo, sem enxergar o todo do negócio.", icon: Question },
-  { label: "Operação", text: "Cada dia é apagar incêndio, sem processo que se repita.", icon: Fire },
-  { label: "Financeiro", text: "Fatura, mas no fim do mês não sabe pra onde foi o lucro.", icon: ChartLineDown },
-  { label: "Marketing", text: "Depende de cupom e impulsionamento só pra aparecer.", icon: Ticket },
+  { label: "Estratégia", text: "Você vende, compra, resolve funcionário, responde cliente e decide tudo no achismo.", icon: Question },
+  { label: "Operação", text: "Cada dia é apagar incêndio, sem processo que rode sem você por perto.", icon: Fire },
+  { label: "Financeiro", text: "Fatura tudo isso e no fim do mês se pergunta por que o dinheiro não sobra.", icon: ChartLineDown },
+  { label: "Marketing", text: "Depende de cupom e impulsionamento só pra continuar aparecendo.", icon: Ticket },
   { label: "Vendas", text: "Não sabe criar oportunidade além do que a plataforma entrega.", icon: ShieldWarning },
   { label: "Networking", text: "Toca o negócio sozinho, sem trocar com quem já passou por isso.", icon: HandCoins },
 ];
 
 const VIRADA = [
-  { label: "Estratégia", text: "Decide com clareza, enxergando o negócio como um todo.", icon: Compass },
-  { label: "Operação", text: "Tem processo que roda com ou sem você por perto.", icon: Gauge },
-  { label: "Financeiro", text: "Sabe exatamente onde está o lucro, e onde ele escapa.", icon: PiggyBank },
-  { label: "Marketing", text: "Constrói posicionamento próprio, não depende só de cupom.", icon: Megaphone },
-  { label: "Vendas", text: "Cria oportunidade de venda além do que a plataforma entrega.", icon: TrendUp },
-  { label: "Networking", text: "Tem uma rede de donos de delivery pra trocar experiência.", icon: UsersFour },
+  { label: "Estratégia", text: "De decisão no achismo, para decisão baseada no negócio.", icon: Compass },
+  { label: "Operação", text: "De apagar incêndio, para processo que funciona.", icon: Gauge },
+  { label: "Financeiro", text: "De faturamento sem clareza, para visão real de margem e lucro.", icon: PiggyBank },
+  { label: "Marketing", text: "De depender de cupom, para construir demanda própria.", icon: Megaphone },
+  { label: "Vendas", text: "De esperar pedido, para criar oportunidade nova.", icon: TrendUp },
+  { label: "Networking", text: "De resolver tudo sozinho, para trocar com quem também está no jogo.", icon: UsersFour },
 ];
 
 const CREDIBILIDADE = [
-  { label: "Estratégias práticas", icon: Target },
-  { label: "Network de alto nível", icon: UsersThree },
-  { label: "Conteúdo aplicável", icon: Lightbulb },
-  { label: "Resultados reais", icon: TrendUp },
+  { label: "Estratégia prática pro delivery", icon: Target },
+  { label: "Empresários trocando experiência real", icon: UsersThree },
+  { label: "Conteúdo direto da operação", icon: Lightbulb },
+  { label: "2 dias fora do escritório", icon: TrendUp },
+];
+
+const PARA_QUEM = [
+  "Seu delivery fatura, mas o lucro não acompanha.",
+  "Você ainda precisa estar em tudo pro negócio funcionar.",
+  "Sua operação vive apagando incêndio.",
+  "Você depende demais das plataformas pra gerar venda.",
+  "Você trabalha muito, mas sente que não cresce com previsibilidade.",
+  "Você quer deixar de ser só operador e agir como empresário.",
 ];
 
 const TICKETS = [
   {
     name: "Standard",
+    tagline: "Para quem quer dominar o conteúdo.",
     price: "397",
     installment: "12x R$ 45,16",
     features: [
@@ -109,6 +119,7 @@ const TICKETS = [
   },
   {
     name: "Duplo",
+    tagline: "Para quem não quer voltar pra operação sozinho.",
     price: "597",
     installment: "12x R$ 67,92",
     highlight: true,
@@ -121,6 +132,7 @@ const TICKETS = [
   },
   {
     name: "VIP Premium",
+    tagline: "Para quem quer estar mais perto do palco, dos especialistas e das conexões certas.",
     price: "1.497",
     installment: "12x R$ 170,31",
     features: [
@@ -206,19 +218,18 @@ export default function Home() {
             </Reveal>
             <Reveal delay={120}>
               <h1 className="font-display max-w-xl text-4xl leading-[1.05] tracking-wide text-foreground sm:text-5xl">
-                CONHECIMENTO, ESTRATÉGIA E CONEXÕES{" "}
+                Seu delivery pode faturar mais.{" "}
                 <span className="text-gold">
-                  PARA TRANSFORMAR SEU DELIVERY!
+                  Mas não pode continuar dependendo de você.
                 </span>
               </h1>
             </Reveal>
             <Reveal delay={180}>
               <p className="mt-6 max-w-lg text-base text-foreground/70 sm:text-lg">
-                Quem vive de delivery precisa{" "}
-                <span className="text-gold">estar aqui</span>. Em 2 dias de
-                imersão presencial, destrave seu delivery, aumente seus lucros
-                e dependa menos da operação, ao lado de Vini Pires, mentor de
-                Delivery e iFood que já ajudou mais de 1.000 empreendedores.
+                2 dias para sair do improviso, enxergar o negócio por inteiro
+                e destravar as decisões que estão limitando seu crescimento.
+                Ao lado de Vini Pires, mentor de Delivery e iFood que já
+                ajudou mais de 1.000 empreendedores.
               </p>
             </Reveal>
 
@@ -258,7 +269,7 @@ export default function Home() {
                   rel="noreferrer"
                   className="btn-gold inline-flex items-center gap-2 rounded-full px-10 py-4 text-base font-bold uppercase tracking-wide text-black"
                 >
-                  Garanta seu ingresso
+                  Quero destravar meu delivery
                   <ArrowRight weight="bold" className="h-5 w-5" />
                 </a>
               </div>
@@ -291,8 +302,8 @@ export default function Home() {
         </Reveal>
         <Reveal delay={80}>
           <Heading>
-            Você não vai sair do Destrava{" "}
-            <span className="text-gold">do mesmo jeito que entrou</span>.
+            Não é falta de esforço.{" "}
+            <span className="text-gold">É falta de clareza e estrutura</span>.
           </Heading>
         </Reveal>
         <div className="mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -318,8 +329,8 @@ export default function Home() {
         </Reveal>
         <Reveal delay={80}>
           <Heading>
-            Quem toca o delivery sozinho, sempre esbarra{" "}
-            <span className="text-gold">no mesmo roteiro</span>.
+            Você fatura tudo isso.{" "}
+            <span className="text-gold">Então por que o dinheiro não sobra?</span>
           </Heading>
         </Reveal>
 
@@ -339,9 +350,17 @@ export default function Home() {
         </Reveal>
         <Reveal delay={80}>
           <Heading>
-            É isso que o Destrava Delivery{" "}
-            <span className="text-gold">entrega em 2 dias</span>.
+            O delivery mudou.{" "}
+            <span className="text-gold">Sua gestão também precisa mudar</span>.
           </Heading>
+        </Reveal>
+        <Reveal delay={120}>
+          <p className="mx-auto mt-4 max-w-xl text-center text-sm text-foreground/60">
+            Não basta mais abrir uma operação, entrar na plataforma, colocar
+            cupom e esperar pedido. Hoje quem toca um delivery precisa
+            entender de dado, margem, marca, aquisição, operação, tecnologia
+            e gestão.
+          </p>
         </Reveal>
         <div className="mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {VIRADA.map((v, i) => (
@@ -359,17 +378,40 @@ export default function Home() {
         </div>
       </section>
 
+      {/* PARA QUEM É */}
+      <section className="border-b border-panel-border px-6 py-24 sm:py-32">
+        <Reveal>
+          <Eyebrow>Pra quem é</Eyebrow>
+        </Reveal>
+        <Reveal delay={80}>
+          <Heading>
+            O Destrava é para você{" "}
+            <span className="text-gold">se...</span>
+          </Heading>
+        </Reveal>
+        <div className="mx-auto mt-12 grid max-w-3xl grid-cols-1 gap-4 sm:grid-cols-2">
+          {PARA_QUEM.map((texto, i) => (
+            <Reveal key={texto} delay={i * 60}>
+              <div className="flex h-full items-start gap-3 rounded-2xl border border-panel-border bg-panel p-6">
+                <CheckCircle weight="fill" className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
+                <p className="text-sm text-foreground/80">{texto}</p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
       {/* RESULTADOS / DEPOIMENTOS */}
       <section className="border-b border-panel-border px-6 py-24 sm:py-32">
         <div className="mx-auto grid max-w-5xl items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
           <div>
             <Reveal>
-              <Eyebrow align="left">Resultados reais</Eyebrow>
+              <Eyebrow align="left">Última edição</Eyebrow>
             </Reveal>
             <Reveal delay={80}>
               <Heading align="left">
-                O que quem já passou pelo Destrava{" "}
-                <span className="text-gold">está dizendo</span>.
+                Quem já passou pelo Destrava{" "}
+                <span className="text-gold">mostra como foi</span>.
               </Heading>
             </Reveal>
             <Reveal delay={140}>
@@ -401,9 +443,8 @@ export default function Home() {
         </Reveal>
         <Reveal delay={80}>
           <Heading>
-            Quem opera em alta performance{" "}
-            <span className="text-gold">te preparará</span> para o{" "}
-            <span className="text-gold">Novo Delivery</span>.
+            Quem vive a operação de delivery todo dia{" "}
+            <span className="text-gold">no palco com você</span>.
           </Heading>
         </Reveal>
 
@@ -500,7 +541,7 @@ export default function Home() {
         </Reveal>
         <Reveal delay={80}>
           <Heading>
-            Garanta o seu{" "}
+            Escolha o ingresso{" "}
             <span className="text-gold">antes da virada de lote</span>.
           </Heading>
         </Reveal>
@@ -527,6 +568,9 @@ export default function Home() {
                 )}
                 <p className="font-display text-xl text-foreground">
                   {ticket.name}
+                </p>
+                <p className="mt-1 text-sm text-foreground/60">
+                  {ticket.tagline}
                 </p>
                 <p className="mt-4">
                   <span className="text-sm text-foreground/50">R$ </span>
@@ -556,7 +600,7 @@ export default function Home() {
                     ticket.highlight ? "btn-gold text-black" : "btn-gold-outline text-gold"
                   }`}
                 >
-                  Garantir vaga
+                  Escolher meu ingresso
                   <ArrowRight weight="bold" className="h-4 w-4" />
                 </a>
               </div>
@@ -575,11 +619,11 @@ export default function Home() {
             </h2>
             <p className="mt-6 max-w-md text-base text-foreground/70 sm:text-lg">
               Mentor de Delivery e iFood, Vini Pires já ajudou mais de 1.000
-              empreendedores a enxergarem seus negócios com mais estratégia,
-              lucro e clareza. Foi dessa vivência no mercado e da vontade de
-              compartilhar conhecimento que nasceu o Destrava Delivery: um
-              evento para quem quer sair do improviso e alcançar um novo
-              nível.
+              empreendedores a sair do achismo e enxergar o próprio negócio
+              com mais estratégia, lucro e clareza. Foi dessa vivência no
+              mercado que nasceu o Destrava Delivery: um evento pra quem quer
+              parar de apagar incêndio e voltar pra operação com outra
+              cabeça.
             </p>
             <a
               href="https://www.instagram.com/vinipiresoficial"
@@ -689,7 +733,8 @@ export default function Home() {
       <section className="bg-noise border-t border-panel-border px-6 py-24 sm:py-32 text-center">
         <Reveal>
           <h2 className="font-display mx-auto max-w-2xl text-3xl text-foreground/90 sm:text-4xl">
-            O conhecimento <span className="text-gold">muda o jogo</span>.
+            Você pode continuar apagando incêndio.{" "}
+            <span className="text-gold">Ou pode destravar o negócio.</span>
           </h2>
         </Reveal>
         <Reveal delay={100}>
@@ -704,7 +749,7 @@ export default function Home() {
             rel="noreferrer"
             className="btn-gold mt-8 inline-flex items-center gap-2 rounded-full px-10 py-4 text-base font-bold uppercase tracking-wide text-black"
           >
-            Garanta seu ingresso
+            Quero estar no Destrava Delivery
             <ArrowRight weight="bold" className="h-5 w-5" />
           </a>
         </Reveal>
