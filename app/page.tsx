@@ -493,9 +493,9 @@ export default function Home() {
             {
               name: "William Flores",
               photo: "/brand/william-flores.jpg",
-              w: 1086,
-              h: 1448,
-              pos: "object-top",
+              w: 1949,
+              h: 2087,
+              pos: "object-center",
               bio: "Especialista em multimarcas no delivery, foco em estratégia real e mais lucro e liberdade pro negócio.",
             },
             {
@@ -505,14 +505,6 @@ export default function Home() {
               h: 1280,
               pos: "object-top",
               bio: "Empresário, palestrante e mentor, com foco em operação que gera resultado e mentalidade empresarial.",
-            },
-            {
-              name: "Alecsander Xavier",
-              photo: "/brand/alecsander-xavier.jpg",
-              w: 1949,
-              h: 2087,
-              pos: "object-right",
-              bio: "Palestrante confirmado do Destrava Delivery 2.0 — credencial completa em breve.",
             },
           ].map((p, i) => (
             <Reveal key={p.name} delay={140 + i * 60}>
@@ -536,6 +528,24 @@ export default function Home() {
           ))}
 
           <Reveal delay={440}>
+            <div className="flex h-full flex-col overflow-hidden rounded-2xl border border-panel-border bg-panel">
+              <div className="flex h-64 w-full items-center justify-center bg-panel font-display text-4xl text-gold">
+                AX
+              </div>
+              <div className="p-6">
+                <span className="mb-3 block h-[3px] w-6 bg-gold" />
+                <p className="font-display text-lg text-foreground">
+                  Alecsander Xavier
+                </p>
+                <p className="mt-1 text-sm text-foreground/60">
+                  Palestrante confirmado do Destrava Delivery 2.0 — credencial
+                  completa em breve.
+                </p>
+              </div>
+            </div>
+          </Reveal>
+
+          <Reveal delay={500}>
             <div className="overflow-hidden rounded-2xl border border-panel-border bg-panel">
               <Image
                 src="/brand/glaucia-hortega.jpg"
