@@ -148,7 +148,7 @@ export default function Home() {
   return (
     <div className="flex flex-col bg-background">
       {/* HERO */}
-      <section className="bg-noise relative overflow-hidden border-b border-panel-border px-6 py-16 sm:py-24">
+      <section className="bg-noise relative overflow-hidden px-6 py-16 sm:py-24">
         <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
           {/* LEFT: content */}
           <div className="text-left">
