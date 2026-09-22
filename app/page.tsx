@@ -216,11 +216,11 @@ export default function Home() {
           <div className="text-left">
             <Reveal>
               <Image
-                src="/brand/logo.png"
+                src="/brand/logo-horizontal.png"
                 alt="Destrava Delivery"
-                width={934}
-                height={787}
-                className="mb-4 h-[120px] w-auto lg:h-[128px]"
+                width={2000}
+                height={665}
+                className="mb-5 h-[70px] w-auto lg:h-[78px]"
                 priority
               />
             </Reveal>
