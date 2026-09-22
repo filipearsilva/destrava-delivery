@@ -26,9 +26,6 @@ import {
   Compass,
   PiggyBank,
   Quotes,
-  Package,
-  Motorcycle,
-  Timer,
 } from "@phosphor-icons/react/dist/ssr";
 import Countdown from "./components/Countdown";
 import AutoplayVideo from "./components/AutoplayVideo";
@@ -286,40 +283,6 @@ export default function Home() {
                 priority
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent" />
-
-              {/* Card estilo notificação de pedido */}
-              <div className="absolute -bottom-5 -left-5 w-60 rounded-2xl border border-panel-border bg-panel p-4 shadow-2xl">
-                <div className="flex items-center gap-2">
-                  <span className="relative flex h-2 w-2">
-                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-                    <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
-                  </span>
-                  <p className="text-[10px] font-semibold uppercase tracking-widest text-foreground/50">
-                    Novo pedido recebido
-                  </p>
-                </div>
-                <div className="mt-3 flex items-center gap-3">
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gold/15">
-                    <Package weight="fill" className="h-4 w-4 text-gold" />
-                  </div>
-                  <div>
-                    <p className="text-sm font-semibold text-foreground">
-                      Combo família
-                    </p>
-                    <p className="text-xs text-foreground/50">Pedido #1842</p>
-                  </div>
-                </div>
-                <div className="mt-3 flex items-center justify-between border-t border-panel-border pt-3 text-xs text-foreground/60">
-                  <span className="flex items-center gap-1">
-                    <Timer weight="fill" className="h-3.5 w-3.5 text-gold" />
-                    32 min
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <Motorcycle weight="fill" className="h-3.5 w-3.5 text-gold" />
-                    A caminho
-                  </span>
-                </div>
-              </div>
             </div>
           </Reveal>
         </div>
