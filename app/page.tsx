@@ -238,16 +238,17 @@ export default function Home() {
             </div>
           </Reveal>
         </div>
-
-        <Reveal delay={420}>
-          <div className="mt-16">
-            <Ticker items={CREDIBILIDADE} />
-          </div>
-        </Reveal>
       </section>
 
+      {/* TICKER — faixa diagonal entre hero e mentor, por cima das duas seções */}
+      <div className="relative z-20 -mt-8 mb-[-2rem] sm:-mt-10">
+        <Reveal delay={420}>
+          <Ticker items={CREDIBILIDADE} />
+        </Reveal>
+      </div>
+
       {/* MENTOR */}
-      <section className="border-b border-panel-border px-6 py-20">
+      <section className="relative border-b border-panel-border px-6 pt-24 pb-20">
         <div className="mx-auto grid max-w-5xl items-center gap-10 md:grid-cols-[220px_1fr]">
           <Reveal>
             <div className="mx-auto flex h-44 w-44 items-center justify-center rounded-full border-2 border-gold/60 bg-panel font-display text-4xl text-gold">
@@ -283,10 +284,10 @@ export default function Home() {
             Você não vai sair do Destrava do mesmo jeito que entrou
           </h2>
         </Reveal>
-        <div className="mx-auto mt-12 grid max-w-5xl gap-px overflow-hidden rounded-2xl border border-panel-border bg-panel-border sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {PILARES.map((p, i) => (
-            <Reveal key={p.label} delay={i * 80} className="bg-panel">
-              <div className="h-full p-8">
+            <Reveal key={p.label} delay={i * 80}>
+              <div className="card-soft h-full rounded-2xl border border-panel-border bg-panel p-8">
                 <p.icon weight="duotone" className="h-8 w-8 text-gold" />
                 <p className="font-display mt-3 text-xl text-gold">
                   {p.label}
@@ -311,7 +312,7 @@ export default function Home() {
         <div className="mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {DORES.map((d, i) => (
             <Reveal key={d.label} delay={i * 70}>
-              <div className="flex h-full flex-col gap-3 rounded-2xl border border-panel-border bg-panel p-6">
+              <div className="card-soft flex h-full flex-col gap-3 rounded-2xl border border-panel-border bg-panel p-6">
                 <d.icon weight="duotone" className="h-7 w-7 text-red-400" />
                 <p className="text-xs font-semibold uppercase tracking-widest text-foreground/40">
                   {d.label}
@@ -336,7 +337,7 @@ export default function Home() {
         <div className="mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {VIRADA.map((v, i) => (
             <Reveal key={v.label} delay={i * 70}>
-              <div className="flex h-full flex-col gap-3 rounded-2xl border border-gold/30 bg-panel p-6 card-glow">
+              <div className="card-soft flex h-full flex-col gap-3 rounded-2xl border border-panel-border bg-panel p-6">
                 <v.icon weight="duotone" className="h-7 w-7 text-gold" />
                 <p className="text-xs font-semibold uppercase tracking-widest text-gold/70">
                   {v.label}
@@ -358,7 +359,7 @@ export default function Home() {
             O que quem já passou pelo Destrava está dizendo
           </h2>
         </Reveal>
-        <div className="mx-auto mt-10 grid max-w-4xl grid-cols-1 gap-4 sm:grid-cols-3">
+        <div className="mx-auto mt-10 grid max-w-5xl grid-cols-1 gap-4 sm:grid-cols-3">
           {Array.from({ length: 3 }).map((_, i) => (
             <Reveal key={i} delay={i * 80}>
               <div className="flex h-full flex-col items-center justify-center gap-3 rounded-2xl border border-dashed border-panel-border bg-panel/60 p-8">
@@ -383,7 +384,7 @@ export default function Home() {
           </h2>
         </Reveal>
         <Reveal delay={140}>
-          <div className="mx-auto mt-10 max-w-3xl overflow-hidden rounded-3xl border border-panel-border">
+          <div className="mx-auto mt-10 max-w-5xl overflow-hidden rounded-3xl border border-panel-border">
             <Image
               src="/brand/palestrantes.jpg"
               alt="Vini Pires e os palestrantes convidados do Destrava Delivery 2.0"
@@ -424,10 +425,10 @@ export default function Home() {
           {TICKETS.map((ticket, i) => (
             <Reveal key={ticket.name} delay={i * 100}>
               <div
-                className={`card-glow flex h-full flex-col rounded-2xl border p-8 ${
+                className={`flex h-full flex-col rounded-2xl border bg-panel p-8 ${
                   ticket.highlight
-                    ? "border-gold bg-panel"
-                    : "border-panel-border bg-panel"
+                    ? "card-glow-primary border-gold/50"
+                    : "card-soft border-panel-border"
                 }`}
               >
                 {ticket.highlight && (
