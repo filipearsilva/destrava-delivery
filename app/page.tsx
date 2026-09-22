@@ -136,11 +136,26 @@ const TICKETS = [
 
 function Eyebrow({ children }: { children: React.ReactNode }) {
   return (
-    <p className="mb-3 flex items-center justify-center gap-3 text-xs font-semibold tracking-[0.3em] text-gold uppercase">
-      <span className="h-px w-6 bg-gold/60" />
+    <p className="mb-4 flex items-center gap-2 text-xs font-semibold tracking-[0.3em] text-gold/70 uppercase">
+      <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
       {children}
-      <span className="h-px w-6 bg-gold/60" />
     </p>
+  );
+}
+
+function Heading({
+  children,
+  className = "",
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
+  return (
+    <h2
+      className={`font-display max-w-2xl text-3xl leading-tight text-foreground/90 sm:text-4xl ${className}`}
+    >
+      {children}
+    </h2>
   );
 }
 
@@ -281,16 +296,18 @@ export default function Home() {
           <Eyebrow>O que você vai destravar</Eyebrow>
         </Reveal>
         <Reveal delay={80}>
-          <h2 className="font-display mx-auto max-w-2xl text-center text-3xl text-foreground sm:text-4xl">
-            Você não vai sair do Destrava do mesmo jeito que entrou
-          </h2>
+          <Heading>
+            Você não vai sair do Destrava{" "}
+            <span className="text-gold">do mesmo jeito que entrou</span>.
+          </Heading>
         </Reveal>
         <div className="mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {PILARES.map((p, i) => (
             <Reveal key={p.label} delay={i * 80}>
               <div className="card-soft h-full rounded-2xl border border-panel-border bg-panel p-8">
                 <p.icon weight="duotone" className="h-8 w-8 text-gold" />
-                <p className="font-display mt-3 text-xl text-gold">
+                <span className="mt-4 mb-2 block h-[3px] w-6 bg-gold" />
+                <p className="font-display text-xl text-foreground">
                   {p.label}
                 </p>
                 <p className="mt-2 text-sm text-foreground/70">{p.text}</p>
@@ -306,9 +323,10 @@ export default function Home() {
           <Eyebrow>A verdade</Eyebrow>
         </Reveal>
         <Reveal delay={80}>
-          <h2 className="font-display mx-auto max-w-2xl text-center text-3xl text-foreground sm:text-4xl">
-            Quem toca o delivery sozinho, sempre esbarra no mesmo roteiro
-          </h2>
+          <Heading>
+            Quem toca o delivery sozinho, sempre esbarra{" "}
+            <span className="text-gold">no mesmo roteiro</span>.
+          </Heading>
         </Reveal>
 
         <Reveal delay={140}>
@@ -326,15 +344,17 @@ export default function Home() {
           <Eyebrow>A virada</Eyebrow>
         </Reveal>
         <Reveal delay={80}>
-          <h2 className="font-display mx-auto max-w-2xl text-center text-3xl text-foreground sm:text-4xl">
-            É isso que o Destrava Delivery entrega em 2 dias
-          </h2>
+          <Heading>
+            É isso que o Destrava Delivery{" "}
+            <span className="text-gold">entrega em 2 dias</span>.
+          </Heading>
         </Reveal>
         <div className="mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {VIRADA.map((v, i) => (
             <Reveal key={v.label} delay={i * 70}>
               <div className="card-soft flex h-full flex-col gap-3 rounded-2xl border border-panel-border bg-panel p-6">
                 <v.icon weight="duotone" className="h-7 w-7 text-gold" />
+                <span className="block h-[3px] w-6 bg-gold" />
                 <p className="text-xs font-semibold uppercase tracking-widest text-gold/70">
                   {v.label}
                 </p>
@@ -346,14 +366,15 @@ export default function Home() {
       </section>
 
       {/* RESULTADOS / DEPOIMENTOS */}
-      <section className="border-b border-panel-border px-6 py-24 sm:py-32 text-center">
+      <section className="border-b border-panel-border px-6 py-24 sm:py-32">
         <Reveal>
           <Eyebrow>Resultados reais</Eyebrow>
         </Reveal>
         <Reveal delay={80}>
-          <h2 className="font-display mx-auto max-w-2xl text-3xl text-foreground sm:text-4xl">
-            O que quem já passou pelo Destrava está dizendo
-          </h2>
+          <Heading>
+            O que quem já passou pelo Destrava{" "}
+            <span className="text-gold">está dizendo</span>.
+          </Heading>
         </Reveal>
         <div className="mx-auto mt-10 grid max-w-5xl grid-cols-1 gap-4 sm:grid-cols-3">
           {Array.from({ length: 3 }).map((_, i) => (
@@ -372,16 +393,14 @@ export default function Home() {
       {/* PALESTRANTES */}
       <section className="border-b border-panel-border px-6 py-24 sm:py-32">
         <Reveal>
-          <p className="mb-4 text-xs font-semibold tracking-[0.3em] text-gold/70 uppercase">
-            [ Palestrantes ]
-          </p>
+          <Eyebrow>Palestrantes</Eyebrow>
         </Reveal>
         <Reveal delay={80}>
-          <h2 className="font-display max-w-3xl text-3xl leading-tight text-foreground sm:text-4xl">
+          <Heading className="max-w-3xl">
             Quem opera em alta performance{" "}
             <span className="text-gold">te preparará</span> para o{" "}
             <span className="text-gold">Novo Delivery</span>.
-          </h2>
+          </Heading>
         </Reveal>
 
         <div className="mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -437,12 +456,13 @@ export default function Home() {
           <Eyebrow>1º lote</Eyebrow>
         </Reveal>
         <Reveal delay={80}>
-          <h2 className="font-display mx-auto max-w-2xl text-center text-3xl text-foreground sm:text-4xl">
-            Garanta o seu antes da virada de lote
-          </h2>
+          <Heading>
+            Garanta o seu{" "}
+            <span className="text-gold">antes da virada de lote</span>.
+          </Heading>
         </Reveal>
         <Reveal delay={140}>
-          <p className="mx-auto mt-3 max-w-lg text-center text-sm text-foreground/60">
+          <p className="mt-3 max-w-lg text-sm text-foreground/60">
             Lote atual encerra em <Countdown target={LOTE_DEADLINE} />
           </p>
         </Reveal>
@@ -508,9 +528,9 @@ export default function Home() {
           <Eyebrow>Onde será</Eyebrow>
         </Reveal>
         <Reveal delay={80}>
-          <h2 className="font-display mx-auto max-w-2xl text-center text-3xl text-foreground sm:text-4xl">
-            Espaço Vitta Eventos, em São Paulo
-          </h2>
+          <Heading>
+            Espaço Vitta Eventos, em <span className="text-gold">São Paulo</span>.
+          </Heading>
         </Reveal>
 
         <div className="mx-auto mt-12 grid max-w-5xl gap-8 lg:grid-cols-[1fr_1.3fr]">
@@ -572,9 +592,9 @@ export default function Home() {
           <Eyebrow>Dúvidas</Eyebrow>
         </Reveal>
         <Reveal delay={80}>
-          <h2 className="font-display mx-auto max-w-2xl text-center text-3xl text-foreground sm:text-4xl">
-            Perguntas frequentes
-          </h2>
+          <Heading>
+            Perguntas <span className="text-gold">frequentes</span>.
+          </Heading>
         </Reveal>
         <Reveal delay={160} className="mt-12">
           <Faq />
@@ -584,8 +604,8 @@ export default function Home() {
       {/* CTA FINAL */}
       <section className="bg-noise border-t border-panel-border px-6 py-24 sm:py-32 text-center">
         <Reveal>
-          <h2 className="font-display mx-auto max-w-2xl text-3xl text-foreground sm:text-4xl">
-            O conhecimento muda o jogo.
+          <h2 className="font-display mx-auto max-w-2xl text-3xl text-foreground/90 sm:text-4xl">
+            O conhecimento <span className="text-gold">muda o jogo</span>.
           </h2>
         </Reveal>
         <Reveal delay={100}>
