@@ -199,7 +199,7 @@ export default function Home() {
       </div>
 
       {/* HERO */}
-      <section className="bg-noise relative overflow-hidden px-6 py-16 sm:py-24">
+      <section className="bg-noise relative overflow-hidden px-6 py-10 sm:py-14 lg:flex lg:min-h-[calc(100svh-40px)] lg:items-center lg:py-6">
         <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
           {/* LEFT: content */}
           <div className="text-left">
@@ -209,18 +209,18 @@ export default function Home() {
                 alt="Destrava Delivery"
                 width={934}
                 height={787}
-                className="mb-8 h-[174px] w-auto"
+                className="mb-4 h-[120px] w-auto lg:h-[128px]"
                 priority
               />
             </Reveal>
             <Reveal delay={60}>
-              <p className="mb-3 flex items-center gap-3 text-xs font-semibold tracking-[0.3em] text-gold uppercase">
+              <p className="mb-2 flex items-center gap-3 text-xs font-semibold tracking-[0.3em] text-gold uppercase">
                 <span className="h-px w-6 bg-gold/60" />
                 São Paulo
               </p>
             </Reveal>
             <Reveal delay={120}>
-              <h1 className="font-display max-w-xl text-4xl leading-[1.05] tracking-wide text-foreground sm:text-5xl">
+              <h1 className="font-display max-w-xl text-4xl leading-[1.05] tracking-wide text-foreground sm:text-5xl lg:text-[2.375rem]">
                 Seu delivery pode faturar mais.{" "}
                 <span className="text-gold">
                   Mas não pode continuar dependendo de você.
@@ -228,7 +228,7 @@ export default function Home() {
               </h1>
             </Reveal>
             <Reveal delay={180}>
-              <p className="mt-6 max-w-lg text-base text-foreground/70 sm:text-lg">
+              <p className="mt-3 max-w-lg text-sm text-foreground/70 sm:text-base lg:text-[0.9rem]">
                 2 dias para sair do improviso, enxergar o negócio por inteiro
                 e destravar as decisões que estão limitando seu crescimento.
                 Ao lado de Vini Pires, mentor de Delivery e iFood que já
@@ -237,7 +237,7 @@ export default function Home() {
             </Reveal>
 
             <Reveal delay={240}>
-              <div className="mt-10 flex w-fit flex-col gap-4 rounded-2xl border border-panel-border bg-panel px-8 py-5 sm:flex-row sm:gap-8">
+              <div className="mt-5 flex w-fit flex-col gap-3 rounded-2xl border border-panel-border bg-panel px-6 py-3 sm:flex-row sm:gap-6">
                 <div className="flex items-center gap-3 text-left">
                   <CalendarBlank weight="fill" className="h-6 w-6 text-gold" />
                   <div>
@@ -265,12 +265,12 @@ export default function Home() {
             </Reveal>
 
             <Reveal delay={320}>
-              <div className="mt-8">
+              <div className="mt-5">
                 <a
                   href={CHECKOUT_URL}
                   target="_blank"
                   rel="noreferrer"
-                  className="btn-gold inline-flex items-center gap-2 rounded-full px-10 py-4 text-base font-bold uppercase tracking-wide text-black"
+                  className="btn-gold inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-base font-bold uppercase tracking-wide text-black"
                 >
                   Quero destravar meu delivery
                   <ArrowRight weight="bold" className="h-5 w-5" />
@@ -282,7 +282,7 @@ export default function Home() {
 
           {/* RIGHT: placeholder para imagem/manipulação que o Filipe vai subir */}
           <Reveal delay={160} className="hidden lg:block">
-            <div className="relative flex aspect-[4/5] w-full items-center justify-center rounded-3xl border border-dashed border-panel-border bg-panel/40">
+            <div className="relative flex aspect-[4/5] max-h-[520px] w-full items-center justify-center rounded-3xl border border-dashed border-panel-border bg-panel/40">
               <p className="px-8 text-center text-xs font-semibold uppercase tracking-widest text-foreground/30">
                 Espaço reservado: imagem/manipulação a ser inserida
               </p>
