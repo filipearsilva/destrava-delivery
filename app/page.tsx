@@ -563,7 +563,7 @@ export default function Home() {
       <section className="border-b border-panel-border bg-panel/40 px-6 py-24 sm:py-32">
         <div className="mx-auto grid max-w-6xl items-start gap-10 lg:grid-cols-2 lg:gap-16">
           <Reveal className="order-2 lg:order-1">
-            <Eyebrow>Quem está por trás</Eyebrow>
+            <Eyebrow align="left">Quem está por trás</Eyebrow>
             <h2 className="font-display text-4xl leading-tight text-foreground sm:text-5xl">
               Vini <span className="text-gold">Pires</span>
             </h2>
