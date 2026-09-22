@@ -597,7 +597,7 @@ export default function Home() {
                 src="/brand/vini-hero.jpg"
                 alt="Vini Pires"
                 width={1080}
-                height={777}
+                height={1080}
                 className="h-full w-full object-cover"
                 priority
               />
