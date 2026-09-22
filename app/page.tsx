@@ -229,14 +229,15 @@ export default function Home() {
 
       {/* HERO — ATENÇÃO */}
       <section className="bg-noise relative overflow-hidden px-6 py-10 sm:py-14 lg:flex lg:min-h-[calc(100svh-40px)] lg:items-center lg:py-6">
-        {/* Imagem de fundo, sem corte */}
+        {/* Imagem de fundo, preenchendo toda a seção */}
         <div className="absolute inset-0 hidden lg:block">
           <Image
             src="/brand/hero-palco.jpg"
             alt="Vini Pires no palco do Destrava Delivery"
-            width={1672}
-            height={941}
-            className="h-full w-full object-contain object-right"
+            fill
+            sizes="100vw"
+            quality={100}
+            className="object-cover object-[72%_28%]"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/55 to-transparent" />
