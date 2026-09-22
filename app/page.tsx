@@ -420,6 +420,17 @@ export default function Home() {
                 Vídeo oficial da 1ª edição do Destrava Delivery
               </p>
             </Reveal>
+            <Reveal delay={200}>
+              <a
+                href={CHECKOUT_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="btn-gold mt-8 inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-black"
+              >
+                Quero viver o Destrava
+                <ArrowRight weight="bold" className="h-4 w-4" />
+              </a>
+            </Reveal>
           </div>
 
           <Reveal delay={180} className="mx-auto w-full max-w-[288px]">
