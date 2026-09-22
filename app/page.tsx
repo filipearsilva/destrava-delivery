@@ -32,6 +32,7 @@ import Countdown from "./components/Countdown";
 import Faq from "./components/Faq";
 import Reveal from "./components/Reveal";
 import Ticker from "./components/Ticker";
+import CardTicker from "./components/CardTicker";
 
 const CHECKOUT_URL =
   "https://www.sympla.com.br/evento/destrava-delivery-2-0/3571158";
@@ -311,37 +312,12 @@ export default function Home() {
         </Reveal>
 
         <Reveal delay={140}>
-          <div className="mt-12 flex flex-col gap-3">
-            <Ticker
+          <div className="mt-14 sm:mt-16">
+            <CardTicker
               items={DORES.map((d) => ({ label: d.text, icon: d.icon }))}
-              diagonal={false}
-              direction="left"
-              durationSeconds={48}
-              tone="red"
-            />
-            <Ticker
-              items={DORES.map((d) => ({ label: d.label }))}
-              diagonal={false}
-              direction="right"
-              durationSeconds={40}
-              tone="red"
             />
           </div>
         </Reveal>
-
-        <div className="mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {DORES.map((d, i) => (
-            <Reveal key={d.label} delay={i * 70}>
-              <div className="card-soft flex h-full flex-col gap-3 rounded-2xl border border-panel-border bg-panel p-6">
-                <d.icon weight="duotone" className="h-7 w-7 text-red-400" />
-                <p className="text-xs font-semibold uppercase tracking-widest text-foreground/40">
-                  {d.label}
-                </p>
-                <p className="text-sm text-foreground/70">{d.text}</p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
       </section>
 
       {/* VIRADA */}
