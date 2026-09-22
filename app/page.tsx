@@ -545,11 +545,6 @@ export default function Home() {
             <span className="text-gold">antes da virada de lote</span>.
           </Heading>
         </Reveal>
-        <Reveal delay={140}>
-          <p className="mt-3 max-w-lg text-sm text-foreground/60">
-            Lote atual encerra em <Countdown target={LOTE_DEADLINE} />
-          </p>
-        </Reveal>
 
         <div className="mx-auto mt-12 grid max-w-5xl gap-6 md:grid-cols-3">
           {TICKETS.map((ticket, i) => (
