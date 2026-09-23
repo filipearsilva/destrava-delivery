@@ -238,12 +238,12 @@ export default function Home() {
         {/* Imagem de fundo, preenchendo toda a seção */}
         <div className="absolute inset-0 hidden lg:block">
           <Image
-            src="/brand/hero-palco.jpg"
-            alt="Vini Pires no palco do Destrava Delivery"
+            src="/brand/hero-speakers-composite.png"
+            alt="Palestrantes do Destrava Delivery juntos no palco"
             fill
             sizes="100vw"
             quality={100}
-            className="object-cover object-[72%_28%]"
+            className="object-cover object-[68%_50%]"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/55 to-transparent" />
