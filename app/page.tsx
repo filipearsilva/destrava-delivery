@@ -494,7 +494,7 @@ export default function Home() {
           {[
             {
               name: "Vini Pires",
-              photo: "/brand/vini-portrait.jpg",
+              photo: "/brand/vini-portrait-hero-style.png",
               w: 490,
               h: 1103,
               pos: "object-top",
@@ -502,7 +502,7 @@ export default function Home() {
             },
             {
               name: "Gabriel Viana",
-              photo: "/brand/gabriel-viana.jpg",
+              photo: "/brand/gabriel-viana-hero-style.png",
               w: 2387,
               h: 3182,
               pos: "object-top",
@@ -510,7 +510,7 @@ export default function Home() {
             },
             {
               name: "William Flores",
-              photo: "/brand/william-flores.jpg",
+              photo: "/brand/william-flores-hero-style.png",
               w: 1949,
               h: 2087,
               pos: "object-center",
@@ -518,7 +518,7 @@ export default function Home() {
             },
             {
               name: "Rafael Maia",
-              photo: "/brand/rafael-maia.jpg",
+              photo: "/brand/rafael-maia-hero-style.png",
               w: 858,
               h: 1280,
               pos: "object-top",
@@ -566,7 +566,7 @@ export default function Home() {
           <Reveal delay={500}>
             <div className="overflow-hidden rounded-2xl border border-panel-border bg-panel">
               <Image
-                src="/brand/glaucia-hortega.jpg"
+                src="/brand/glaucia-hortega-hero-style.png"
                 alt="Glaucia Hortega"
                 width={640}
                 height={641}
