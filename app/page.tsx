@@ -370,7 +370,7 @@ export default function Home() {
                 <span className="font-display text-lg text-foreground">Keeta</span>
               </div>
               <div className="flex items-center gap-2 rounded-full border border-[#f4c542]/40 bg-[#f4c542]/10 px-5 py-3">
-                <Image src="/brand/marketplaces/99food.png" alt="99Food" width={48} height={32} className="h-8 w-12 object-contain" />
+                <Image src="/brand/marketplaces/99food.png" alt="99Food" width={48} height={32} className="h-8 w-12 object-contain brightness-0 invert" />
                 <span className="font-display text-lg text-foreground">99Food</span>
               </div>
             </div>
