@@ -362,15 +362,15 @@ export default function Home() {
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
               <div className="flex items-center gap-2 rounded-full border border-[#ea1d2c]/40 bg-[#ea1d2c]/10 px-5 py-3">
-                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#ea1d2c] text-[10px] font-black text-white">iF</span>
+                <Image src="/brand/marketplaces/ifood.svg" alt="iFood" width={32} height={32} className="h-8 w-8" />
                 <span className="font-display text-lg text-foreground">iFood</span>
               </div>
               <div className="flex items-center gap-2 rounded-full border border-[#66c34a]/40 bg-[#66c34a]/10 px-5 py-3">
-                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#66c34a] text-[10px] font-black text-black">K</span>
+                <Image src="/brand/marketplaces/keeta.png" alt="Keeta" width={32} height={32} className="h-8 w-8 rounded-full object-cover" />
                 <span className="font-display text-lg text-foreground">Keeta</span>
               </div>
               <div className="flex items-center gap-2 rounded-full border border-[#f4c542]/40 bg-[#f4c542]/10 px-5 py-3">
-                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#f4c542] text-[10px] font-black text-black">99</span>
+                <Image src="/brand/marketplaces/99food.png" alt="99Food" width={32} height={32} className="h-8 w-8 rounded-full object-cover" />
                 <span className="font-display text-lg text-foreground">99Food</span>
               </div>
             </div>
