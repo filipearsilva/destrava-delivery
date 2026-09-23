@@ -25,7 +25,7 @@ export default function ObrigadoPage() {
           <div className="mb-5 flex items-center gap-3 text-sm font-bold uppercase tracking-[0.28em] text-[#f4b82b]"><span className="grid size-8 place-items-center rounded-full bg-[#f4b82b] text-lg font-black text-[#151006] shadow-[0_0_24px_rgba(244,184,43,0.35)]">✓</span><span>Sua vaga está garantida</span></div>
           <h1 className="max-w-2xl text-5xl font-black leading-[0.98] tracking-[-0.05em] sm:text-6xl lg:text-7xl">Parabéns pela sua compra.</h1>
           <p className="mt-7 max-w-xl text-lg leading-relaxed text-[#bdb5a8] sm:text-xl">Bem-vindo ao Destrava Delivery 2.0. Você acaba de confirmar sua presença em uma experiência criada para destravar o próximo nível do seu negócio.</p>
-          <a href={VIP_GROUP_URL} className="mt-9 inline-flex items-center gap-3 rounded-full bg-[#25d366] px-7 py-4 text-sm font-black uppercase tracking-[0.12em] text-[#071b0d] transition hover:bg-[#49e47f]"><WhatsAppIcon /> Acessar grupo VIP <span aria-hidden="true">→</span></a>
+          <a href={VIP_GROUP_URL} className="mt-9 inline-flex items-center gap-3 rounded-full bg-[#25d366] px-7 py-4 text-sm font-black uppercase tracking-[0.12em] text-[#071b0d] transition hover:bg-[#49e47f]"><WhatsAppIcon /> Acessar grupo VIP</a>
           <p className="mt-4 text-sm text-[#877e70]">É dentro do grupo que você recebe os próximos avisos, orientações e suporte.</p>
         </div>
         <div className="relative mx-auto w-full max-w-xl lg:ml-auto">
@@ -55,7 +55,7 @@ export default function ObrigadoPage() {
             <h2 className="text-3xl font-black sm:text-4xl">Ficou com alguma dúvida?</h2>
             <p className="mt-4 max-w-2xl text-lg leading-relaxed text-[#bdb5a8]">Entre no grupo VIP. Nosso suporte vai acompanhar você por lá e ajudar com qualquer dúvida sobre acesso, programação e tudo o que você precisa saber antes do evento.</p>
           </div>
-          <a href={VIP_GROUP_URL} className="inline-flex items-center justify-center gap-3 rounded-full border border-[#25d366] px-7 py-4 text-sm font-black uppercase tracking-[0.12em] text-[#25d366] transition hover:bg-[#25d366] hover:text-[#071b0d]"><WhatsAppIcon /> Entrar no grupo <span aria-hidden="true">→</span></a>
+          <a href={VIP_GROUP_URL} className="inline-flex items-center justify-center gap-3 rounded-full border border-[#25d366] px-7 py-4 text-sm font-black uppercase tracking-[0.12em] text-[#25d366] transition hover:bg-[#25d366] hover:text-[#071b0d]"><WhatsAppIcon /> Entrar no grupo</a>
         </div>
         <div className="mx-auto mt-10 flex max-w-5xl items-center justify-center gap-2 text-sm text-[#877e70]"><span aria-hidden="true">?</span> Se precisar, fale com o suporte dentro do grupo VIP.</div>
       </section>
