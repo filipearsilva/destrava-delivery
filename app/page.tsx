@@ -348,6 +348,36 @@ export default function Home() {
         </Reveal>
       </div>
 
+      {/* MARKETPLACES — IDENTIFICAÇÃO */}
+      <section className="border-b border-panel-border bg-panel/40 px-6 py-16 sm:py-20">
+        <Reveal>
+          <div className="mx-auto max-w-4xl rounded-3xl border border-gold/25 bg-background/70 p-8 text-center sm:p-12">
+            <Eyebrow>Para quem vive o delivery</Eyebrow>
+            <h2 className="mx-auto mt-4 max-w-2xl font-display text-3xl leading-tight text-foreground sm:text-4xl">
+              Se o seu delivery está em algum marketplace,{" "}
+              <span className="text-gold">você precisa estar neste evento.</span>
+            </h2>
+            <p className="mx-auto mt-4 max-w-xl text-sm text-foreground/65 sm:text-base">
+              Entenda como transformar plataforma, dados e operação em mais margem e previsibilidade.
+            </p>
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+              <div className="flex items-center gap-2 rounded-full border border-[#ea1d2c]/40 bg-[#ea1d2c]/10 px-5 py-3">
+                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#ea1d2c] text-[10px] font-black text-white">iF</span>
+                <span className="font-display text-lg text-foreground">iFood</span>
+              </div>
+              <div className="flex items-center gap-2 rounded-full border border-[#66c34a]/40 bg-[#66c34a]/10 px-5 py-3">
+                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#66c34a] text-[10px] font-black text-black">K</span>
+                <span className="font-display text-lg text-foreground">Keeta</span>
+              </div>
+              <div className="flex items-center gap-2 rounded-full border border-[#f4c542]/40 bg-[#f4c542]/10 px-5 py-3">
+                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#f4c542] text-[10px] font-black text-black">99</span>
+                <span className="font-display text-lg text-foreground">99Food</span>
+              </div>
+            </div>
+          </div>
+        </Reveal>
+      </section>
+
       {/* DOR — PROBLEMA */}
       <section className="border-b border-panel-border px-6 py-24 sm:py-32">
         <Reveal>
