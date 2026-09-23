@@ -235,16 +235,19 @@ export default function Home() {
 
       {/* HERO — ATENÇÃO */}
       <section className="bg-noise relative overflow-hidden px-6 py-10 sm:py-14 lg:flex lg:min-h-[calc(100svh-40px)] lg:items-center lg:py-16">
-        {/* Textura discreta do palco no fundo; a composição fica na coluna direita. */}
-        <div className="pointer-events-none absolute inset-0 opacity-20">
+        {/* Composição horizontal: área limpa à esquerda e palestrantes à direita. */}
+        <div className="absolute inset-0 hidden lg:block">
           <Image
-            src="/brand/hero-palco.jpg"
-            alt=""
+            src="/brand/hero-speakers-composite.png"
+            alt="Palestrantes do Destrava Delivery juntos no palco"
             fill
             sizes="100vw"
-            className="object-cover object-[72%_28%]"
+            quality={100}
+            className="object-cover object-center"
+            priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/55" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/45 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background/45 via-transparent to-transparent" />
         </div>
 
         <div className="relative mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
@@ -333,21 +336,8 @@ export default function Home() {
 
           </div>
 
-          {/* RIGHT: composição dos palestrantes */}
-          <Reveal delay={220} className="hidden lg:block">
-            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl border border-gold/25 bg-panel shadow-2xl shadow-black/30">
-              <Image
-                src="/brand/hero-speakers-composite.png"
-                alt="Palestrantes do Destrava Delivery juntos no palco"
-                fill
-                sizes="(min-width: 1024px) 50vw, 100vw"
-                quality={100}
-                className="object-cover object-center"
-                priority
-              />
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/35 via-transparent to-transparent" />
-            </div>
-          </Reveal>
+          {/* RIGHT: área reservada para a composição no fundo */}
+          <div className="hidden lg:block" />
         </div>
       </section>
 
