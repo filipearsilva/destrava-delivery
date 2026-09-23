@@ -37,7 +37,8 @@ import CardTicker from "./components/CardTicker";
 
 const CHECKOUT_URL =
   "https://www.sympla.com.br/evento/destrava-delivery-2-0/3571158";
-const LOTE_DEADLINE = "2026-11-10T23:59:59-03:00";
+// Janela inicial de 15 dias para testar a campanha antes da virada de lote.
+const LOTE_DEADLINE = "2026-10-08T23:59:59-03:00";
 
 const PILARES = [
   {
