@@ -497,7 +497,7 @@ export default function Home() {
               photo: "/brand/vini-portrait-hero-style.png",
               w: 490,
               h: 1103,
-              pos: "object-top",
+              pos: "object-top scale-[1.1] -translate-y-4",
               bio: "Mentor de Delivery e iFood, já ajudou mais de 1.000 empreendedores a crescer com mais estratégia e clareza.",
             },
             {
@@ -505,7 +505,7 @@ export default function Home() {
               photo: "/brand/gabriel-viana-hero-style.png",
               w: 2387,
               h: 3182,
-              pos: "object-top",
+              pos: "object-top scale-[1.08] -translate-y-3",
               bio: "Conhecido como Mago do iFood, mentor de gestores e donos de restaurante em gestão de delivery.",
             },
             {
@@ -513,7 +513,7 @@ export default function Home() {
               photo: "/brand/william-flores-hero-style.png",
               w: 1949,
               h: 2087,
-              pos: "object-center",
+              pos: "object-center scale-[1.1] -translate-y-5",
               bio: "Especialista em multimarcas no delivery, foco em estratégia real e mais lucro e liberdade pro negócio.",
             },
             {
@@ -521,7 +521,7 @@ export default function Home() {
               photo: "/brand/rafael-maia-hero-style.png",
               w: 858,
               h: 1280,
-              pos: "object-top",
+              pos: "object-top scale-[1.12] -translate-y-6",
               bio: "Empresário, palestrante e mentor, com foco em operação que gera resultado e mentalidade empresarial.",
             },
           ].map((p, i) => (
@@ -570,7 +570,7 @@ export default function Home() {
                 alt="Glaucia Hortega"
                 width={640}
                 height={641}
-                className="h-64 w-full object-cover object-top"
+                className="h-64 w-full object-cover object-top scale-[1.1] -translate-y-4"
               />
               <div className="p-6">
                 <span className="mb-3 block h-[3px] w-6 bg-gold" />
