@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { ArrowRight, Check, HelpCircle, Users } from "lucide-react";
 
 const VIP_GROUP_URL = process.env.NEXT_PUBLIC_VIP_GROUP_URL ?? "#grupo-vip";
 
@@ -18,7 +17,7 @@ export default function ObrigadoPage() {
           <p className="mb-5 text-sm font-bold uppercase tracking-[0.28em] text-[#f4b82b]">Sua vaga está garantida</p>
           <h1 className="max-w-2xl text-5xl font-black leading-[0.98] tracking-[-0.05em] sm:text-6xl lg:text-7xl">Parabéns pela sua compra.</h1>
           <p className="mt-7 max-w-xl text-lg leading-relaxed text-[#bdb5a8] sm:text-xl">Bem-vindo ao Destrava Delivery 2.0. Você acaba de confirmar sua presença em uma experiência criada para destravar o próximo nível do seu negócio.</p>
-          <a href={VIP_GROUP_URL} className="mt-9 inline-flex items-center gap-3 rounded-full bg-[#f4b82b] px-7 py-4 text-sm font-black uppercase tracking-[0.12em] text-[#151006] transition hover:bg-[#ffd15a]">Acessar grupo VIP <ArrowRight size={19} /></a>
+          <a href={VIP_GROUP_URL} className="mt-9 inline-flex items-center gap-3 rounded-full bg-[#f4b82b] px-7 py-4 text-sm font-black uppercase tracking-[0.12em] text-[#151006] transition hover:bg-[#ffd15a]">Acessar grupo VIP <span aria-hidden="true">→</span></a>
           <p className="mt-4 text-sm text-[#877e70]">É dentro do grupo que você recebe os próximos avisos, orientações e suporte.</p>
         </div>
         <div className="relative mx-auto w-full max-w-xl lg:ml-auto">
@@ -35,7 +34,7 @@ export default function ObrigadoPage() {
             <h2 className="text-4xl font-black leading-tight tracking-[-0.04em] sm:text-5xl">Você vai viver essa experiência por inteiro.</h2>
             <p className="mt-6 text-lg leading-relaxed text-[#bdb5a8]">Preparamos um kit especial para acompanhar você durante o evento e deixar essa jornada ainda mais marcante.</p>
             <ul className="mt-8 space-y-4 text-[#eee6d8]">
-              {["Caderno para suas ideias e decisões", "Garrafa para acompanhar os dois dias", "Ingresso e credencial do evento", "Materiais exclusivos do Destrava Delivery"].map((item) => <li key={item} className="flex items-center gap-3"><span className="grid size-7 place-items-center rounded-full bg-[#f4b82b] text-[#151006]"><Check size={16} strokeWidth={3} /></span><span>{item}</span></li>)}
+              {["Caderno para suas ideias e decisões", "Garrafa para acompanhar os dois dias", "Ingresso e credencial do evento", "Materiais exclusivos do Destrava Delivery"].map((item) => <li key={item} className="flex items-center gap-3"><span className="grid size-7 place-items-center rounded-full bg-[#f4b82b] text-[#151006]"><span aria-hidden="true">✓</span></span><span>{item}</span></li>)}
             </ul>
           </div>
         </div>
@@ -44,13 +43,13 @@ export default function ObrigadoPage() {
       <section id="grupo-vip" className="px-6 py-16 sm:py-24">
         <div className="mx-auto grid max-w-5xl gap-8 rounded-[2rem] border border-[#5a431d] bg-gradient-to-br from-[#241707] to-[#120e08] p-8 sm:p-12 lg:grid-cols-[1fr_auto] lg:items-center">
           <div>
-            <div className="mb-5 flex items-center gap-3 text-[#f4b82b]"><Users size={24} /><span className="text-sm font-bold uppercase tracking-[0.24em]">Comunidade VIP</span></div>
+            <div className="mb-5 flex items-center gap-3 text-[#f4b82b]"><span aria-hidden="true" className="text-xl">◉</span><span className="text-sm font-bold uppercase tracking-[0.24em]">Comunidade VIP</span></div>
             <h2 className="text-3xl font-black sm:text-4xl">Ficou com alguma dúvida?</h2>
             <p className="mt-4 max-w-2xl text-lg leading-relaxed text-[#bdb5a8]">Entre no grupo VIP. Nosso suporte vai acompanhar você por lá e ajudar com qualquer dúvida sobre acesso, programação e tudo o que você precisa saber antes do evento.</p>
           </div>
-          <a href={VIP_GROUP_URL} className="inline-flex items-center justify-center gap-3 rounded-full border border-[#f4b82b] px-7 py-4 text-sm font-black uppercase tracking-[0.12em] text-[#f4b82b] transition hover:bg-[#f4b82b] hover:text-[#151006]">Entrar no grupo <ArrowRight size={19} /></a>
+          <a href={VIP_GROUP_URL} className="inline-flex items-center justify-center gap-3 rounded-full border border-[#f4b82b] px-7 py-4 text-sm font-black uppercase tracking-[0.12em] text-[#f4b82b] transition hover:bg-[#f4b82b] hover:text-[#151006]">Entrar no grupo <span aria-hidden="true">→</span></a>
         </div>
-        <div className="mx-auto mt-10 flex max-w-5xl items-center justify-center gap-2 text-sm text-[#877e70]"><HelpCircle size={16} /> Se precisar, fale com o suporte dentro do grupo VIP.</div>
+        <div className="mx-auto mt-10 flex max-w-5xl items-center justify-center gap-2 text-sm text-[#877e70]"><span aria-hidden="true">?</span> Se precisar, fale com o suporte dentro do grupo VIP.</div>
       </section>
 
       <footer className="border-t border-[#3b2d1b] px-6 py-8 text-center text-sm text-[#877e70]">Destrava Delivery 2.0 · Nos vemos no evento.</footer>
