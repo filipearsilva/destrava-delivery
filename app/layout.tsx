@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   title: "Destrava Delivery 2.0 | Imersão presencial com Vini Pires",
   description:
     "Em 2 dias de imersão presencial em São Paulo, destrave seu delivery, aumente seus lucros e dependa menos da operação. 16 e 17 de novembro.",
+  other: {
+    "facebook-domain-verification": "faj7pcwqc4xpfqgdhpklmglyn43mi6",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
