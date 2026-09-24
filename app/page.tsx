@@ -347,7 +347,7 @@ export default function Home() {
               <span className="text-gold">você precisa estar neste evento.</span>
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-sm text-foreground/65 sm:text-base">
-              Entenda como transformar plataforma, dados e operação em mais margem e previsibilidade.
+              Você que quer faturar e lucrar mais com sua operação, mas não sabe como: entenda como transformar plataforma, dados e operação em mais margem e previsibilidade.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
               <div className="flex items-center gap-2 rounded-full border border-[#ea1d2c]/40 bg-[#ea1d2c]/10 px-5 py-3">
@@ -359,7 +359,7 @@ export default function Home() {
                 <span className="font-display text-lg text-foreground">Keeta</span>
               </div>
               <div className="flex items-center gap-2 rounded-full border border-[#f4c542]/40 bg-[#f4c542]/10 px-5 py-3">
-                <Image src="/brand/marketplaces/99food.png" alt="99Food" width={48} height={32} className="h-8 w-12 object-contain brightness-0 invert" />
+                <Image src="/brand/marketplaces/99food.png" alt="99Food" width={48} height={32} className="h-8 w-12 object-contain" />
                 <span className="font-display text-lg text-foreground">99Food</span>
               </div>
             </div>
