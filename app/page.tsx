@@ -322,17 +322,6 @@ export default function Home() {
               </div>
             </Reveal>
 
-            <Reveal delay={360} className="lg:hidden">
-              <div className="relative mt-8 aspect-video w-full overflow-hidden rounded-2xl border border-panel-border bg-black">
-                <Image
-                  src="/brand/hero-speakers-composite.png"
-                  alt="Palestrantes do Destrava Delivery juntos no palco"
-                  fill
-                  sizes="100vw"
-                  className="object-contain"
-                />
-              </div>
-            </Reveal>
 
           </div>
 
@@ -528,7 +517,7 @@ export default function Home() {
               photo: "/brand/vini-portrait-hero-style.png",
               w: 490,
               h: 1103,
-              pos: "object-[center_38%]",
+              pos: "lg:object-[center_38%]",
               bio: "Mentor de Delivery e iFood, já ajudou mais de 1.000 empreendedores a crescer com mais estratégia e clareza.",
             },
             {
@@ -536,7 +525,7 @@ export default function Home() {
               photo: "/brand/gabriel-viana-hero-style.png",
               w: 2387,
               h: 3182,
-              pos: "object-[center_38%]",
+              pos: "lg:object-[center_38%]",
               bio: "Conhecido como Mago do iFood, mentor de gestores e donos de restaurante em gestão de delivery.",
             },
             {
@@ -544,7 +533,7 @@ export default function Home() {
               photo: "/brand/william-flores-hero-style.png",
               w: 1949,
               h: 2087,
-              pos: "object-[center_40%]",
+              pos: "lg:object-[center_40%]",
               bio: "Especialista em multimarcas no delivery, foco em estratégia real e mais lucro e liberdade pro negócio.",
             },
             {
@@ -552,7 +541,7 @@ export default function Home() {
               photo: "/brand/rafael-maia-hero-style.png",
               w: 858,
               h: 1280,
-              pos: "object-[center_38%]",
+              pos: "lg:object-[center_38%]",
               bio: "Empresário, palestrante e mentor, com foco em operação que gera resultado e mentalidade empresarial.",
             },
           ].map((p, i) => (
@@ -563,7 +552,7 @@ export default function Home() {
                   alt={p.name}
                   width={p.w}
                   height={p.h}
-                  className={`h-64 w-full object-cover ${p.pos}`}
+                  className={`aspect-[4/5] w-full bg-black object-contain lg:aspect-auto lg:h-64 lg:object-cover ${p.pos}`}
                 />
                 <div className="p-6">
                   <span className="mb-3 block h-[3px] w-6 bg-gold" />
@@ -577,8 +566,30 @@ export default function Home() {
           ))}
 
           <Reveal delay={440}>
+            <div className="overflow-hidden rounded-2xl border border-panel-border bg-panel">
+              <Image
+                src="/brand/glaucia-hortega-hero-style.png"
+                alt="Glaucia Hortega"
+                width={640}
+                height={641}
+                className="aspect-[4/5] w-full bg-black object-contain lg:aspect-auto lg:h-64 lg:object-cover lg:object-[center_35%]"
+              />
+              <div className="p-6">
+                <span className="mb-3 block h-[3px] w-6 bg-gold" />
+                <p className="font-display text-lg text-foreground">
+                  Glaucia Hortega
+                </p>
+                <p className="mt-1 text-sm text-foreground/60">
+                  Palestra &quot;Quem Decide, Destrava&quot;: mentalidade e decisão para
+                  quem toca o próprio negócio.
+                </p>
+              </div>
+            </div>
+          </Reveal>
+
+          <Reveal delay={500}>
             <div className="flex h-full flex-col overflow-hidden rounded-2xl border border-panel-border bg-panel">
-              <div className="flex h-64 w-full flex-col items-center justify-center gap-5 bg-gradient-to-br from-gold/15 via-panel to-panel">
+              <div className="flex aspect-[4/5] w-full flex-col items-center justify-center gap-5 bg-gradient-to-br from-gold/15 via-panel to-panel lg:aspect-auto lg:h-64">
                 <div className="flex h-20 w-20 items-center justify-center rounded-full border border-gold/30 bg-gold/10 text-gold">
                   <UsersThree weight="duotone" className="h-10 w-10" aria-hidden="true" />
                 </div>
@@ -592,28 +603,6 @@ export default function Home() {
                 <p className="mt-1 text-sm text-foreground/60">
                   O palco vai ganhar novas vozes. Em breve, mais convidados para
                   compartilhar experiências e destravar seu delivery.
-                </p>
-              </div>
-            </div>
-          </Reveal>
-
-          <Reveal delay={500}>
-            <div className="overflow-hidden rounded-2xl border border-panel-border bg-panel">
-              <Image
-                src="/brand/glaucia-hortega-hero-style.png"
-                alt="Glaucia Hortega"
-                width={640}
-                height={641}
-                className="h-64 w-full object-cover object-[center_35%]"
-              />
-              <div className="p-6">
-                <span className="mb-3 block h-[3px] w-6 bg-gold" />
-                <p className="font-display text-lg text-foreground">
-                  Glaucia Hortega
-                </p>
-                <p className="mt-1 text-sm text-foreground/60">
-                  Palestra &quot;Quem Decide, Destrava&quot;: mentalidade e decisão para
-                  quem toca o próprio negócio.
                 </p>
               </div>
             </div>
@@ -650,11 +639,11 @@ export default function Home() {
           <Reveal delay={140} className="order-1 lg:order-2">
             <div className="aspect-[4/5] w-full overflow-hidden rounded-2xl border border-panel-border bg-panel">
               <Image
-                src="/brand/vini-portrait-hero-style.png"
+                src="/brand/vini-composicao-4476.png"
                 alt="Vini Pires"
                 width={1080}
                 height={1080}
-                className="h-full w-full object-cover"
+                className="h-full w-full object-contain"
                 priority
               />
             </div>
