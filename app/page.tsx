@@ -20,7 +20,6 @@ import {
   ShieldWarning,
   Question,
   HandCoins,
-  ShieldCheck,
   UsersFour,
   Gauge,
   Compass,
@@ -102,6 +101,7 @@ const VIDEOS = [
   { src: "/video/ultima-edicao.mp4", label: "Vídeo oficial da 1ª edição do Destrava Delivery" },
   { src: "/video/depoimento-1.mp4", label: "Recado do Vini Pires sobre o Destrava Delivery" },
   { src: "/video/depoimento-2.mp4", label: "Recado do Vini Pires sobre o Destrava Delivery" },
+  { src: "/video/depoimento-3.mp4", label: "Depoimento sobre o Destrava Delivery" },
 ];
 
 const E_PARA_VOCE = [
@@ -323,13 +323,13 @@ export default function Home() {
             </Reveal>
 
             <Reveal delay={360} className="lg:hidden">
-              <div className="relative mt-8 aspect-[4/5] w-full overflow-hidden rounded-2xl border border-panel-border">
+              <div className="relative mt-8 aspect-video w-full overflow-hidden rounded-2xl border border-panel-border bg-black">
                 <Image
                   src="/brand/hero-speakers-composite.png"
                   alt="Palestrantes do Destrava Delivery juntos no palco"
                   fill
                   sizes="100vw"
-                  className="object-cover object-center"
+                  className="object-contain"
                 />
               </div>
             </Reveal>
@@ -528,7 +528,7 @@ export default function Home() {
               photo: "/brand/vini-portrait-hero-style.png",
               w: 490,
               h: 1103,
-              pos: "object-top scale-[1.1] -translate-y-4",
+              pos: "object-[center_38%]",
               bio: "Mentor de Delivery e iFood, já ajudou mais de 1.000 empreendedores a crescer com mais estratégia e clareza.",
             },
             {
@@ -536,7 +536,7 @@ export default function Home() {
               photo: "/brand/gabriel-viana-hero-style.png",
               w: 2387,
               h: 3182,
-              pos: "object-top scale-[1.08] -translate-y-3",
+              pos: "object-[center_38%]",
               bio: "Conhecido como Mago do iFood, mentor de gestores e donos de restaurante em gestão de delivery.",
             },
             {
@@ -544,7 +544,7 @@ export default function Home() {
               photo: "/brand/william-flores-hero-style.png",
               w: 1949,
               h: 2087,
-              pos: "object-center scale-[1.1] -translate-y-5",
+              pos: "object-[center_40%]",
               bio: "Especialista em multimarcas no delivery, foco em estratégia real e mais lucro e liberdade pro negócio.",
             },
             {
@@ -552,7 +552,7 @@ export default function Home() {
               photo: "/brand/rafael-maia-hero-style.png",
               w: 858,
               h: 1280,
-              pos: "object-top scale-[1.12] -translate-y-6",
+              pos: "object-[center_38%]",
               bio: "Empresário, palestrante e mentor, com foco em operação que gera resultado e mentalidade empresarial.",
             },
           ].map((p, i) => (
@@ -601,7 +601,7 @@ export default function Home() {
                 alt="Glaucia Hortega"
                 width={640}
                 height={641}
-                className="h-64 w-full object-cover object-top scale-[1.1] -translate-y-4"
+                className="h-64 w-full object-cover object-[center_35%]"
               />
               <div className="p-6">
                 <span className="mb-3 block h-[3px] w-6 bg-gold" />
@@ -609,7 +609,7 @@ export default function Home() {
                   Glaucia Hortega
                 </p>
                 <p className="mt-1 text-sm text-foreground/60">
-                  Palestra "Quem Decide, Destrava": mentalidade e decisão para
+                  Palestra &quot;Quem Decide, Destrava&quot;: mentalidade e decisão para
                   quem toca o próprio negócio.
                 </p>
               </div>
@@ -647,7 +647,7 @@ export default function Home() {
           <Reveal delay={140} className="order-1 lg:order-2">
             <div className="aspect-[4/5] w-full overflow-hidden rounded-2xl border border-panel-border bg-panel">
               <Image
-                src="/brand/vini-hero.jpg"
+                src="/brand/vini-portrait-hero-style.png"
                 alt="Vini Pires"
                 width={1080}
                 height={1080}
