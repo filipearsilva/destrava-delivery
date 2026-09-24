@@ -578,17 +578,20 @@ export default function Home() {
 
           <Reveal delay={440}>
             <div className="flex h-full flex-col overflow-hidden rounded-2xl border border-panel-border bg-panel">
-              <div className="flex h-64 w-full items-center justify-center bg-panel font-display text-4xl text-gold">
-                AX
+              <div className="flex h-64 w-full flex-col items-center justify-center gap-5 bg-gradient-to-br from-gold/15 via-panel to-panel">
+                <div className="flex h-20 w-20 items-center justify-center rounded-full border border-gold/30 bg-gold/10 text-gold">
+                  <UsersThree weight="duotone" className="h-10 w-10" aria-hidden="true" />
+                </div>
+                <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">Novas conexões vêm aí</span>
               </div>
               <div className="p-6">
                 <span className="mb-3 block h-[3px] w-6 bg-gold" />
                 <p className="font-display text-lg text-foreground">
-                  Alecsander Xavier
+                  Mais convidados em breve
                 </p>
                 <p className="mt-1 text-sm text-foreground/60">
-                  Palestrante confirmado do Destrava Delivery 2.0 — credencial
-                  completa em breve.
+                  O palco vai ganhar novas vozes. Em breve, mais convidados para
+                  compartilhar experiências e destravar seu delivery.
                 </p>
               </div>
             </div>
