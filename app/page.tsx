@@ -135,6 +135,7 @@ const TODOS_BENEFICIOS = [
 const TICKETS = [
   {
     name: "Standard",
+    trackingKey: "standard",
     tagline: "Para quem quer dominar o conteúdo.",
     price: "397",
     installment: "12x R$ 45,16",
@@ -146,6 +147,7 @@ const TICKETS = [
   },
   {
     name: "Duplo",
+    trackingKey: "duplo",
     tagline: "Para quem não quer voltar pra operação sozinho.",
     price: "597",
     installment: "12x R$ 67,92",
@@ -159,6 +161,7 @@ const TICKETS = [
   },
   {
     name: "VIP Premium",
+    trackingKey: "vip",
     tagline: "Para quem quer estar mais perto do palco, dos especialistas e das conexões certas.",
     price: "1.497",
     installment: "12x R$ 170,31",
@@ -312,6 +315,7 @@ export default function Home() {
               <div className="mt-8">
                 <a
                   href={CHECKOUT_URL}
+                  data-botao="topo"
                   target="_blank"
                   rel="noreferrer"
                   className="btn-gold inline-flex items-center gap-2 rounded-full px-8 py-4 text-base font-bold uppercase tracking-wide text-black"
@@ -673,6 +677,7 @@ export default function Home() {
             <Reveal delay={200}>
               <a
                 href={CHECKOUT_URL}
+                data-botao="video"
                 target="_blank"
                 rel="noreferrer"
                 className="btn-gold mt-8 inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-black"
@@ -859,6 +864,7 @@ export default function Home() {
                 </ul>
                 <a
                   href={CHECKOUT_URL}
+                  data-botao={ticket.trackingKey}
                   target="_blank"
                   rel="noreferrer"
                   className={`mt-8 flex items-center justify-center gap-2 rounded-full px-6 py-3 text-center text-sm font-bold uppercase tracking-wide ${
@@ -969,6 +975,7 @@ export default function Home() {
         <Reveal delay={200}>
           <a
             href={CHECKOUT_URL}
+            data-botao="final"
             target="_blank"
             rel="noreferrer"
             className="btn-gold mt-8 inline-flex items-center gap-2 rounded-full px-10 py-4 text-base font-bold uppercase tracking-wide text-black"

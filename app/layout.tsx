@@ -31,7 +31,25 @@ n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
 n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
 document,'script','https://connect.facebook.net/en_US/fbevents.js');
-fbq('init','2247189142680465');fbq('track','PageView');`}
+fbq('init','2247189142680465');
+fbq('set','autoConfig',false,'2247189142680465');
+fbq('track','PageView');`}
+        </Script>
+        <Script id="clique-sympla" strategy="afterInteractive">
+          {`document.addEventListener('click', function (e) {
+  var link = e.target.closest('a[href*="sympla.com.br"]');
+  if (!link || typeof fbq !== 'function') return;
+
+  var params = { botao: link.dataset.botao || 'nao_identificado' };
+  var url = link.href;
+  var novaAba = link.target === '_blank' || e.ctrlKey || e.metaKey;
+
+  if (novaAba) { fbq('trackCustom', 'clique_sympla', params); return; }
+
+  e.preventDefault();
+  fbq('trackCustom', 'clique_sympla', params);
+  setTimeout(function () { window.location.href = url; }, 400);
+}, true);`}
         </Script>
         <noscript>
           <img
